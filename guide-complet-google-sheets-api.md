@@ -8,17 +8,55 @@ Ce guide couvre **l’intégralité** du projet :
 
 ---
 
-## 📦 Google Sheets + Drive comme API REST — Guide Complet (Apps Script + JS Pur)
+#
 
-Ce guide couvre **l’intégralité** du projet :
-✅ API REST sans backend  
-✅ Upload d’images dans Google Drive  
-✅ Stockage de données dans Google Sheets  
-✅ Frontend JavaScript pur (aucune librairie externe)
+## 👶 Départ à zéro — Créer tes feuilles Google
+
+1. Va sur [Google Sheets](https://docs.google.com/spreadsheets/)
+2. Clique sur **+ Vierge** pour créer une nouvelle feuille
+3. Renomme le document, par exemple `Mon API Google Sheets`
+4. Renomme l’onglet en bas de la feuille : `Data`
+5. Ajoute un autre onglet : en bas à gauche, clique sur `+` et nomme-le `Images`
+6. Dans l’onglet `Data`, entre cette première ligne (titres des colonnes) :
+
+```
+uuid | createdAt | lastModifiedAt | image_uuid | nom | ville | métier
+```
+
+7. Dans l’onglet `Images`, entre cette première ligne :
+
+```
+uuid | createdAt | filename | url
+```
 
 ---
 
-## 🛠️ Code complet — Google Apps Script
+## 🚀 Déployer l’API Google Apps Script
+
+1. Dans Google Sheets, ouvre le menu **Extensions > Apps Script**
+2. Colle le script complet fourni dans ce guide
+3. Clique sur l’icône de disquette 💾 ou `Ctrl+S` pour enregistrer
+4. Donne un nom à ton projet si demandé
+
+### 🔓 Autoriser les permissions
+
+1. Clique sur **Déployer > Tester les déploiements**
+2. Clique sur **Déployer > Nouveau déploiement**
+3. Sélectionne **Type : Application web**
+4. Configure comme suit :
+   - **Description** : `API Sheets`
+   - **Exécuter en tant que** : **Moi (propriétaire)**
+   - **Qui a accès** : **Tout le monde**
+5. Clique sur **Autoriser** → sélectionne ton compte → clique sur "Avancé" → "Continuer"
+6. Une URL te sera fournie. Elle ressemble à :
+
+```
+https://script.google.com/macros/s/AKfycbX.../exec
+```
+
+7. Cette URL est ton **point d’entrée API**. Garde-la précieusement.
+
+# 🛠️ Code complet — Google Apps Script
 
 ```javascript
 function doPost(e) {
@@ -298,4 +336,4 @@ fetch(API_URL + "?image_uuid=UUID_IMAGE")
 
 # 🧠 Auteur
 
-Maxime Larrivée-Roy — juillet 2025  
+Maxime Larrivée-Roy — juillet 2025 🛠️
