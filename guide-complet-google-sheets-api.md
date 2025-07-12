@@ -67,13 +67,23 @@ function doPost(e) {
   const allRows = sheet.getDataRange().getValues();
   const action = data.action;
 
+  // 📸 Upload image avec nom unique
   if (data.image && !action && data.filename) {
-    const filename = data.filename;
+    const folder = getOrCreateFolder("ImagesUpload");
+    const originalName = data.filename;
+    const ext = originalName.includes('.') ? originalName.split('.').pop() : '';
+    const base = originalName.replace(/\.[^/.]+$/, '');
+    let filename = originalName;
+    let counter = 1;
+
+    while (folder.getFilesByName(filename).hasNext()) {
+      filename = base + '-' + counter + (ext ? '.' + ext : '');
+      counter++;
+    }
+
     const contentType = data.image.match(/^data:(.+);base64,/)[1];
     const rawData = data.image.replace(/^data:.+;base64,/, "");
     const blob = Utilities.newBlob(Utilities.base64Decode(rawData), contentType, filename);
-
-    const folder = getOrCreateFolder("ImagesUpload");
     const file = folder.createFile(blob);
     file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
     const url = file.getUrl();
@@ -94,7 +104,7 @@ function doPost(e) {
     for (let i = 1; i < rows.length; i++) {
       if (rows[i][0] === uuid) {
         const url = rows[i][3];
-        const fileId = url.match(/[-\w]{25,}/)?.[0];
+        const fileId = url.match(/[-\\w]{25,}/)?.[0];
         if (fileId) {
           try { DriveApp.getFileById(fileId).setTrashed(true); } catch (e) {}
         }
@@ -199,6 +209,7 @@ function getOrCreateFolder(name) {
   const folders = DriveApp.getFoldersByName(name);
   return folders.hasNext() ? folders.next() : DriveApp.createFolder(name);
 }
+
 ```
 
 ---

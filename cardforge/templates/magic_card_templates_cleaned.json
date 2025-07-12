@@ -1,0 +1,3377 @@
+[
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Creature",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Instant",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Sorcery",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Artifact",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Enchantment",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Land",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Planeswalker",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": null,
+    "Card Type": "Battle",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Creature",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Instant",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Sorcery",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Artifact",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Enchantment",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Land",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Planeswalker",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": "Legendary",
+    "Card Type": "Battle",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": "Basic",
+    "Card Type": "Land",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Creature",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Instant",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Sorcery",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Artifact",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Enchantment",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Land",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Planeswalker",
+    "Color Identity": "Colorless"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "W"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "U"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "W, U"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "W, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "W, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "W, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "U, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "U, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "U, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "W, U, B"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "W, U, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "W, U, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "W, B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "W, B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "W, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "U, B, R"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "U, B, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "U, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "B, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "W, U, B, R, G"
+  },
+  {
+    "Supertype": "Snow",
+    "Card Type": "Battle",
+    "Color Identity": "Colorless"
+  }
+]
