@@ -1,0 +1,16 @@
+{
+    "data": {
+        "project": "Magic The Listerine",
+        "baseurl": "https://magicthelisterine.github.io/",
+        "author": "Magic The Listerine",
+        "lang": "fr_ca",
+        "gtag": ""
+    },
+    "includes": [
+        "pxdoc/_includes/functions.php",
+        "pxdoc/_includes/hooks.php"
+    ],
+    "before": "pxdoc/_includes/before.php",
+    "after": "pxdoc/_includes/after.php",
+    "styles": "theme/styles/styles.min.css"
+}
