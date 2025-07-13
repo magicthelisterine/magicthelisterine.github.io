@@ -41,12 +41,12 @@ function getSimpleHtml() {
 
       html += `<li>${content}`;
       openListItem = true;
-    } else {
+
+    } else if (type === DocumentApp.ElementType.PARAGRAPH) {
       if (openListItem) {
         html += `</li>\n`;
         openListItem = false;
       }
-
       while (listStack.length > 0) {
         html += `</${listStack.pop()}>\n`;
       }
@@ -70,6 +70,21 @@ function getSimpleHtml() {
           html += `<p>${content}</p>\n`;
         }
       }
+
+    } else if (type === DocumentApp.ElementType.TABLE) {
+      const table = element.asTable();
+      html += '<table>\n';
+      for (let r = 0; r < table.getNumRows(); r++) {
+        const row = table.getRow(r);
+        html += '  <tr>\n';
+        for (let c = 0; c < row.getNumCells(); c++) {
+          const cell = row.getCell(c);
+          const cellContent = parseStyledTextWithBreaks(cell).trim();
+          html += `    <td>${cellContent}</td>\n`;
+        }
+        html += '  </tr>\n';
+      }
+      html += '</table>\n';
     }
   }
 
@@ -83,11 +98,11 @@ function getSimpleHtml() {
   return html;
 }
 
-function parseStyledTextWithBreaks(paragraph) {
+function parseStyledTextWithBreaks(container) {
   let html = '';
 
-  for (let i = 0; i < paragraph.getNumChildren(); i++) {
-    const child = paragraph.getChild(i);
+  for (let i = 0; i < container.getNumChildren(); i++) {
+    const child = container.getChild(i);
     const type = child.getType();
 
     if (type === DocumentApp.ElementType.TEXT) {
@@ -120,6 +135,8 @@ function parseStyledTextWithBreaks(paragraph) {
       const contentType = blob.getContentType();
       const base64 = Utilities.base64Encode(blob.getBytes());
       html += `<img src="data:${contentType};base64,${base64}">`;
+    } else if (type === DocumentApp.ElementType.PARAGRAPH || type === DocumentApp.ElementType.LIST_ITEM) {
+      html += parseStyledTextWithBreaks(child);
     }
   }
 
@@ -129,22 +146,31 @@ function parseStyledTextWithBreaks(paragraph) {
 function headingToTag(heading) {
   switch (heading) {
     case DocumentApp.ParagraphHeading.HEADING1: return 'grostitre';
-    case DocumentApp.ParagraphHeading.HEADING2: return 'h2';
-    case DocumentApp.ParagraphHeading.HEADING3: return 'h3';
+    case DocumentApp.ParagraphHeading.HEADING2: return 'h3';
+    case DocumentApp.ParagraphHeading.HEADING3: return 'h4';
+    case DocumentApp.ParagraphHeading.HEADING4: return 'h5';
+    case DocumentApp.ParagraphHeading.HEADING5: return 'h6';
     default: return null;
   }
 }
 
 function escapeHtml(text) {
-  return text
-    .replace(/&/g, '&amp;')
+  const allowedTags = ['table', 'thead', 'tbody', 'tfoot', 'tr', 'td', 'th', 'dots', 'checklist', 'box'];
+
+  return text.replace(/<\/?([a-zA-Z0-9\-]+)(\s[^>]*)?>/g, (match, tagName) => {
+    if (allowedTags.includes(tagName.toLowerCase())) {
+      return match; // laisser intact
+    }
+    return match.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }).replace(/&/g, '&amp;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
 }
 
 function isPureHtmlBlock(text) {
-  const regex = /^<([a-zA-Z0-9-]+)(\s[^>]*)?>[\s\S]*<\/\1>$/;
-  return regex.test(text.trim());
+  const trimmed = text.trim();
+  const match = trimmed.match(/^<([a-zA-Z0-9-]+)(\s[^>]*)?>[\s\S]*<\/\1>$/);
+  return !!match;
 }
 
 function test() {
