@@ -46,6 +46,7 @@
     <li>Lead Dev: <em>Maxime Larrivée-Roy</em></li>
     <li>Base de donnée: <em>Francis Naud</em></li>
     <li>Set Master: <em>Jonathan Doucet</em></li>
+    <li>Editeur: <em>François Simard</em></li>
 </ul>
 
 <dots></dots>
