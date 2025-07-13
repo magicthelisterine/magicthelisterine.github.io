@@ -12,4 +12,6 @@
 
 <dots></dots>
 
+<doclink href="https://docs.google.com/document/d/1q9wdK9Np61po0HOI3zVO8RBv3TETgUxQbvLquHvqn8s/edit">Modifier le document</doclink>
+
 <p><small>Dernière mise-à-jour: <em><compdate></compdate></em></small></p>
