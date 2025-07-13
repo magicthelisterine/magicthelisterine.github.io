@@ -161,12 +161,41 @@ $color_red_hex: unquote('#{str-slice(ie-hex-str($color_red), 4)}');
 
 body.dark {
 
-    #title img[src*="logo-textless"] {
-        filter: invert(100%);
-    }
-
+    #title img[src*="logo-textless"],
     div.breadcrum-logo {
         filter: invert(100%);
     }
+
+}
+
+
+.card-submit-container {
+    // height: 100px;
+    // background-color: red;
+
+    form table {
+        // background-color: blue;
+        margin: 0;
+
+
+        td {
+            width: 50%;
+            // background-color: green;
+        }
+
+
+
+
+    }
+
+
+    .dnd-file {
+        // position: relative;
+        // width: 200px;
+        width: 100%;
+        background-color: pink;
+        aspect-ratio: 4/3;
+    }
+
 
 }

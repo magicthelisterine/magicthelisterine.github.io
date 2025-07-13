@@ -1,0 +1,149 @@
+<!-- 
+
+██████╗ ██╗ █████╗ ███╗   ███╗███████╗████████╗██████╗ ██╗ ██████╗██╗  ██╗
+██╔══██╗██║██╔══██╗████╗ ████║██╔════╝╚══██╔══╝██╔══██╗██║██╔════╝██║ ██╔╝
+██║  ██║██║███████║██╔████╔██║█████╗     ██║   ██████╔╝██║██║     █████╔╝ 
+██║  ██║██║██╔══██║██║╚██╔╝██║██╔══╝     ██║   ██╔══██╗██║██║     ██╔═██╗ 
+██████╔╝██║██║  ██║██║ ╚═╝ ██║███████╗   ██║   ██║  ██║██║╚██████╗██║  ██╗
+╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝
+
+-->
+<!DOCTYPE html>
+<html lang="fr-ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta itemprop="digest" content="">
+        <meta itemprop="lang" content="fr_ca">
+        <meta property="og:locale" content="fr_ca">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Règles de base | Magic The Listerine">
+        <meta property="og:description" content="R&egrave;gles de base pour &eacute;valuer le co&ucirc;t d&#039;une cr&eacute;ature">
+        <meta property="og:url" content="https://magicthelisterine.github.io/journal/reglesdebase/">
+        <meta property="og:image" content="https://magicthelisterine.github.io/journal/images/image.webp">
+        <link rel="icon" type="image/x-icon" href="../../pxdoc/images/favicon.ico">
+        <link rel="stylesheet" href="../../pxdoc/styles/styles.min.css">
+        <link rel="stylesheet" href="../../theme/styles/styles.min.css">
+        <script>const shared = '../../pxdoc/';</script>
+        <script src="../../pxdoc/jscripts/highlight.min.js"></script>
+        <script src="../../pxdoc/jscripts/swiper-bundle.min.js"></script>
+        <script src="../../pxdoc/jscripts/vue.global.prod.js"></script>
+        <script src="../../pxdoc/jscripts/pxdoc.min.js"></script>
+        <title>Règles de base</title>
+    </head>
+    <body>
+        <script>document.body.classList.add(localStorage.getItem('darkmode') === 'true' ? 'dark' : 'light');</script>
+        <a id="top"></a>
+        <div id="logo" @click="goToTop('../../', '')" title="Retour à l'accueil"></div>
+        <div title="Interrupteur" id="lightswitch" ref="lightswitch" @click="lightswitch()"></div>
+        <header>
+            <div id="breadcrumb">
+                <div id="breadcrumb_normal"><div class="breadcrum-logo" style="background-image: url(../../assets/images/logo-textless.svg);"></div><a href="../../../">Magic The Listerine</a> > <a href="../">Journal</a> ></div>
+                <div id="breadcrumb_index"></div>
+            </div>
+            <h1 id="title"><img src="images/icon.webp">&nbsp;Règles de base</h1>
+        </header>
+        <main>
+            <article>
+                <div id="contents">
+
+<grostitre>La &quot;règle du Vanilla Test&quot;</grostitre>
+<p>Pour une créature <strong>sans habileté</strong>, le coût de mana est généralement :</p>
+<strong>Force + Endurance = coût converti en mana</strong>
+<h5><strong>Exemples :</strong></h5>
+<table>
+  <tr>
+    <td><strong>Force/Endurance</strong></td>
+    <td><strong>Coût approximatif</strong></td>
+    <td><strong>Notes</strong></td>
+  </tr>
+  <tr>
+    <td>2/2</td>
+    <td>2 (ex : 1R)</td>
+    <td>Standard</td>
+  </tr>
+  <tr>
+    <td>3/3</td>
+    <td>3 (ex : 2G)</td>
+    <td>Standard</td>
+  </tr>
+  <tr>
+    <td>4/4</td>
+    <td>4 (ex : 3B)</td>
+    <td>Standard</td>
+  </tr>
+</table>
+<em>Si elle a juste un mot-clé comme vigilance, piétinement ou vol → on augmente de ½ à 1 mana.</em>
+<dots></dots>
+<grostitre>Valeur des capacités</grostitre>
+<p>Voici une estimation de combien chaque habileté &quot;vaut&quot; en <strong>mana supplémentaire</strong> :</p>
+<table>
+  <tr>
+    <td><strong>Capacité</strong></td>
+    <td><strong>Coût estimé en mana</strong></td>
+  </tr>
+  <tr>
+    <td>Vol, vigilance, piétinement</td>
+    <td>+½ mana</td>
+  </tr>
+  <tr>
+    <td>Initiative, défense talismanique</td>
+    <td>+1 mana</td>
+  </tr>
+  <tr>
+    <td>Lien de vie, menace</td>
+    <td>+1 mana</td>
+  </tr>
+  <tr>
+    <td>Double initiative</td>
+    <td>+2 mana</td>
+  </tr>
+  <tr>
+    <td>Protection, indestructible</td>
+    <td>+1.5 à +2 mana</td>
+  </tr>
+  <tr>
+    <td>Création de jetons</td>
+    <td>+1-3 mana selon effet</td>
+  </tr>
+  <tr>
+    <td>Capacité activée puissante</td>
+    <td>+1-2 mana selon usage</td>
+  </tr>
+  <tr>
+    <td>Capacité de pioche, vol de vie, sacrifice, discard</td>
+    <td>peut monter très vite</td>
+  </tr>
+</table>
+<dots></dots>
+<grostitre>Autres facteurs</grostitre>
+<ul>
+<li><strong>Couleur(s)</strong> : les cartes multicolores peuvent avoir un coût plus fort pour le même effet.</li>
+<li><strong>Créatures légendaires</strong> : souvent un peu plus puissantes, mais équilibrées par leur unicité.</li>
+<li><strong>Synergie tribale</strong> : si une carte booste tout un type (ex : &quot;tous les roux ont +1/+0&quot;), ça vaut du mana.</li>
+</ul>
+<dots></dots>
+<grostitre>Exemple pratique</grostitre>
+<h4><strong>Alex des Contrats d’gars</strong></h4>
+<ul>
+<li>Force/Endurance : 4/3 → ≈ 4 mana</li>
+<li>Capacité : Subjugue tous les adversaires au moment d’entrer → ça vaut facilement <strong>+1 à +2 mana</strong></li>
+<li>Synergie comique : si salade en jeu, devient berserker → bonus situationnel, ajoute un peu de valeur</li>
+</ul>
+<strong>Coût recommandé :</strong> <strong>5 mana (3RR)</strong> ou <strong>4 mana avec restriction (2RR, mais arrive engagé)</strong>
+
+
+<dots></dots>
+
+<p><small>Dernière mise-à-jour: <em><time datetime="2025-07-13 18:44:36">2025-07-13 18:44:36</time></em></small></p>
+                </div>
+                <tabledesmatieres></tabledesmatieres>
+            </article>
+        </main>
+        <footer>
+            © Tous droits réservés<br>Magic The Listerine, 2025            
+        </footer>
+        <script>app.mount('body');</script>
+    </body>
+</html>
