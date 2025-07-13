@@ -22,6 +22,13 @@
 
 <dots></dots>
 
+<grostitre>Roue des saveurs</grostitre>
+<br>
+
+<img src="../assets/images/wheel.webp" alt="">
+
+<dots></dots>
+
 <gdoc id="AKfycbx219UslZ2uoRBsak_-pu5yBsLEoIiXfB1KF9GHINK2_JC48dYGwxLPlGATsEbdbYWsRw"></gdoc>
 
 
