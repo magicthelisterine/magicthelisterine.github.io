@@ -161,8 +161,7 @@ $color_red_hex: unquote('#{str-slice(ie-hex-str($color_red), 4)}');
 
 body.dark {
 
-    #title img:first-child {
-        // background-color: red;
+    #title img[src*="logo-textless"] {
         filter: invert(100%);
     }
 
