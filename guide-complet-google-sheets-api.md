@@ -156,8 +156,11 @@ function doPost(e) {
 }
 
 function doGet(e) {
+  if (!e || !e.parameter) return respond({ status: "error", message: "No parameters provided" });
+
   const ss = SpreadsheetApp.getActiveSpreadsheet();
 
+  // GET /?images=true → retourne toutes les images
   if (e.parameter.images === "true") {
     const sheet = ss.getSheetByName("Images");
     const data = sheet.getDataRange().getValues();
@@ -170,6 +173,7 @@ function doGet(e) {
     return respond({ status: "success", count: rows.length, images: rows });
   }
 
+  // GET /?image_uuid=... → retourne une seule image
   if (e.parameter.image_uuid) {
     const sheet = ss.getSheetByName("Images");
     const data = sheet.getDataRange().getValues();
@@ -184,17 +188,32 @@ function doGet(e) {
     return respond({ status: "error", message: "Image UUID not found" });
   }
 
-  const sheet = ss.getSheetByName("Data");
-  const data = sheet.getDataRange().getValues();
+  // GET / ou /?uuid=... → retourne un ou tous les rows de Data, avec image jointe
+  const dataSheet = ss.getSheetByName("Data");
+  const imageSheet = ss.getSheetByName("Images");
+  const imageData = imageSheet.getDataRange().getValues();
+  const imageHeaders = imageData[0];
+  const imageMap = {};
+  for (let i = 1; i < imageData.length; i++) {
+    const obj = {};
+    imageHeaders.forEach((h, j) => obj[h] = imageData[i][j]);
+    imageMap[imageData[i][0]] = obj;
+  }
+
+  const data = dataSheet.getDataRange().getValues();
   const headers = data[0];
   const uuid = e.parameter.uuid;
+
   const rows = data.slice(1).filter(row => !uuid || row[0] === uuid).map((row, index) => {
     const obj = { rowIndex: index + 2 };
     headers.forEach((h, i) => obj[h] = row[i]);
+    const imageUUID = obj.image_uuid;
+    obj.image = imageMap[imageUUID] || null;
     return obj;
   });
 
   if (uuid && rows.length === 0) return respond({ status: "error", message: "UUID not found" });
+
   return uuid
     ? respond({ status: "success", row: rows[0] })
     : respond({ status: "success", count: rows.length, rows });

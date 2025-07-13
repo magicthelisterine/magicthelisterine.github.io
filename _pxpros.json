@@ -8,7 +8,8 @@
     },
     "includes": [
         "pxdoc/_includes/functions.php",
-        "pxdoc/_includes/hooks.php"
+        "pxdoc/_includes/hooks.php",
+        "_includes/hooks.php"
     ],
     "before": "pxdoc/_includes/before.php",
     "after": "pxdoc/_includes/after.php",
