@@ -169,8 +169,8 @@ body.dark {
 
 }
 
-table tr:nth-child(even) td,
-body.dark table tr:nth-child(even) td {
+.card-submit-container table tr:nth-child(even) td,
+body.dark .card-submit-container table tr:nth-child(even) td {
     background-color: unset;
 }
 
