@@ -52,13 +52,23 @@
     <form>
         <table>
             <tr>
-                <td rowspan="4">
-
+                <td rowspan="7">
 
                     <div class="dnd-file"></div>
 
-
                 </td>
+                <td>
+                    <input type="text" placeholder="Nom de la carte">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="serie" id="serie">
+                        <option value="">--- Série ---</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
                 <td>
                     <select name="supertype" id="supertype">
                         <option value="">--- Super type ---</option>
@@ -68,18 +78,23 @@
             <tr>
                 <td>
                 <select name="type" id="type">
-                        <option value="">--- type ---</option>
+                        <option value="">--- Type ---</option>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="text">
+                    <input type="text" placeholder="Sous-type">
                 </td>
             </tr>
             <tr>
                 <td>
                     <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td class="pt-input">
+                    <input type="number" placeholder="Force">&nbsp;<strong>/</strong>&nbsp;<input type="number" placeholder="Endurance">
                 </td>
             </tr>
         </table>

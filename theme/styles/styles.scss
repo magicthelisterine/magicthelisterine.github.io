@@ -10,6 +10,7 @@
 */
 
 @use 'sass:color';
+@use 'partials/symbols';
 
 $light: 45%;
 $dark: 65%;
@@ -168,6 +169,10 @@ body.dark {
 
 }
 
+table tr:nth-child(even) td,
+body.dark table tr:nth-child(even) td {
+    background-color: unset;
+}
 
 .card-submit-container {
     // height: 100px;
@@ -181,13 +186,15 @@ body.dark {
         td {
             width: 50%;
             // background-color: green;
+            vertical-align: top;
+            // // background-color: unset;
         }
 
 
 
 
     }
-
+    
 
     .dnd-file {
         // position: relative;
@@ -195,6 +202,29 @@ body.dark {
         width: 100%;
         background-color: pink;
         aspect-ratio: 4/3;
+    }
+
+
+    input[type="text"], input[type="number"],
+    select {
+        width: 100%;
+        font-family: Rubik;
+        font-size: 14px;
+        height: 26px;
+        padding-left: 4px;
+        text-align: center;
+    }
+
+    td.pt-input {
+        text-align: justify;
+        text-align-last: justify;
+        
+        input {
+            text-align: center;
+            text-align-last: center;
+            width: 45%;
+        }
+        
     }
 
 
