@@ -161,12 +161,10 @@ $color_red_hex: unquote('#{str-slice(ie-hex-str($color_red), 4)}');
 // #logo, .breadcrum-logo { filter: hue-rotate(3.142rad) brightness(100%) drop-shadow(0 0 min(10px, 0.76vw) var(--color-white-alpha5)); }
 
 body.dark {
-
     #title img[src*="logo-textless"],
     div.breadcrum-logo {
         filter: invert(100%);
     }
-
 }
 
 .card-submit-container table tr:nth-child(even) td,
@@ -177,6 +175,7 @@ body.dark .card-submit-container table tr:nth-child(even) td {
 .card-submit-container {
     // height: 100px;
     // background-color: red;
+    
 
     form table {
         // background-color: blue;
@@ -197,10 +196,12 @@ body.dark .card-submit-container table tr:nth-child(even) td {
     
 
     .dnd-file {
+        border: 1px solid var(--main-color-grey-light);
         // position: relative;
         // width: 200px;
         width: 100%;
-        background-color: pink;
+        // background-color: pink;
+
         aspect-ratio: 4/3;
     }
 
@@ -228,4 +229,38 @@ body.dark .card-submit-container table tr:nth-child(even) td {
     }
 
 
+}
+
+
+.card-submit-cost-symbols {
+    position: absolute;
+    display: none;
+    background-color: #f1f1f1;
+    padding: 10px 12px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 14px;
+    max-width: 300px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
+
+
+.card-submit-cost-symbols-btn {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+body.dark .dnd-file {
+    border: 1px solid var(--main-color-grey-dark);
 }

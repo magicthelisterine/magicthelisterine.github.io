@@ -77,31 +77,43 @@
             </tr>
             <tr>
                 <td>
-                <select name="type" id="type">
+                    <select name="type" id="type">
                         <option value="">--- Type ---</option>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="text" placeholder="Sous-type">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="text">
+                    <input type="text" placeholder="Sous-type" id="subtype">
                 </td>
             </tr>
             <tr>
                 <td class="pt-input">
-                    <input type="number" placeholder="Force">&nbsp;<strong>/</strong>&nbsp;<input type="number" placeholder="Endurance">
+                    <input type="number" placeholder="Force" min="0" max="12" id="power">&nbsp;<strong>/</strong>&nbsp;<input type="number" placeholder="Endurance" min="0" max="12" id="toughness">
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <input type="text" placeholder="Coût" autocomplete="off" id="myInput">
+                </td>
+            </tr>
+
         </table>
     </form>
 
 
 </div>
+
+<script src="./scripts/submit.min.js"></script>
+<script>ready(evt => { SubmitForm.init(); });</script>
+
+
+
+
+
+
+
+
                 </div>
                 <tabledesmatieres></tabledesmatieres>
             </article>
