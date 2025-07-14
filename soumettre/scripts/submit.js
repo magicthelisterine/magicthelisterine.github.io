@@ -4,6 +4,7 @@ const SubmitForm = {
     supertype: null,
     type: null,
     dnd: null,
+    desc: null,
 
 
     init: function (data) {
@@ -12,6 +13,7 @@ const SubmitForm = {
         this.serie = document.getElementById('serie');
         this.supertype = document.getElementById('supertype');
         this.type = document.getElementById('type');
+        this.desc = document.getElementById('desc');
         this.fillSerie(data.series);
         this.fillSuperType(data.supertypes);
         this.fillType(data.types);
@@ -21,6 +23,7 @@ const SubmitForm = {
 
         DropImage.init(this.dnd);
         HintSymbols.init();
+        MTGEditor.init(this.desc);
     },
 
 
@@ -123,6 +126,7 @@ const HintSymbols = {
 const DropImage = {
 
     div: null,
+    value: null,
 
     init: function (div) {
         this.div = div;
@@ -147,7 +151,7 @@ const DropImage = {
 
         this.div.addEventListener('click', evt => {
             browse('image/*', (evt) => {
-                   if (evt.target.files.length > 0) {
+                if (evt.target.files.length > 0) {
                     this.handleFile(evt.target.files[0]);
                 }
             });
@@ -155,13 +159,12 @@ const DropImage = {
 
     },
 
-
-
     handleFile: function (file) {
         // console.log(file);
         if (file.type.startsWith('image/') && file.size <= 5242880) {
             const reader = new FileReader();
             reader.onload = (e) => {
+                this.value = e.target.result;
                 this.div.style.setProperty('--bg-image', `url("${e.target.result}")`);
             };
             reader.readAsDataURL(file);
@@ -170,6 +173,65 @@ const DropImage = {
         }
     }
 
+}
+
+
+const MTGEditor = {
+    symbols: ["I", "U", "G", "B", "W", "R", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "2B", "2G", "2R", "2U", "2W", "BG", "BR", "GU", "GW", "RG", "RW", "UB", "UR", "WB", "WU", "X", "Y", "Z", "T", "T1", "T2"],
+    toolbar: null,
+    elm: null,
+
+
+    init: function (elm) {
+        this.elm = elm;
+        this.toolbar = create('div', 'MTGEditor-toolbar');
+
+
+        this.elm.parentElement.insertBefore(this.toolbar, this.elm);
+
+        this.symbols.forEach(v => {
+            const btn = this.toolbar.create('div', 'symbol24 icon-' + v);
+            console.log("patate");
+            btn.bind('click', evt => {
+                if (v == 'I') this.wrapItalic();
+                else this.insert('{' + v + '}');
+            });
+        });
+
+
+    },
+
+    insert: function (text) {
+        const start = this.elm.selectionStart;
+        const end = this.elm.selectionEnd;
+        const before = this.elm.value.substring(0, start);
+        const after = this.elm.value.substring(end);
+        this.elm.value = before + text + after;
+        const nouvellePosition = start + text.length;
+        this.elm.selectionStart = this.elm.selectionEnd = nouvellePosition;
+        this.elm.focus();
+    },
+
+
+    wrapItalic: function () {
+        const start = this.elm.selectionStart;
+        const end = this.elm.selectionEnd;
+        const selectedText = this.elm.value.substring(start, end);
+        let insertedText;
+        let newCursorPosition;
+        if (selectedText.length > 0) {
+            insertedText = `{I}${selectedText}{/I}`;
+            newCursorPosition = start + insertedText.length;
+        } else {
+            insertedText = `{I}{/I}`;
+            newCursorPosition = start + 3; // cursor between the tags
+        }
+        const before = this.elm.value.slice(0, start);
+        const after = this.elm.value.slice(end);
+        this.elm.value = before + insertedText + after;
+        this.elm.selectionStart = this.elm.selectionEnd = newCursorPosition;
+        this.elm.focus();
+    }
 
 
 }

@@ -163,16 +163,14 @@ $color_red_hex: unquote('#{str-slice(ie-hex-str($color_red), 4)}');
 
 }
 
-
-
-// #logo, .breadcrum-logo { filter: hue-rotate(3.142rad) brightness(100%) drop-shadow(0 0 min(10px, 0.76vw) var(--color-white-alpha5)); }
-
 body.dark {
     #title img[src*="logo-textless"],
     div.breadcrum-logo {
         filter: invert(100%);
     }
 }
+
+
 
 .card-submit-container table tr:nth-child(even) td,
 body.dark .card-submit-container table tr:nth-child(even) td {
@@ -250,7 +248,7 @@ body.dark .card-submit-container table tr:nth-child(even) td {
 
     }
 
-
+    
     input[type="text"], input[type="number"],
     select {
         width: 100%;
@@ -301,6 +299,16 @@ width: 100%;
         }
     }
 
+    textarea {
+        width: 100%;
+        font-family: Rubik;
+        padding: 8px;
+        font-size: 14px;
+        // height: 26px;
+        padding-left: 4px;
+        // text-align: center;
+    }
+
 
 }
 
@@ -332,9 +340,37 @@ width: 100%;
 }
 
 
+.MTGEditor-toolbar {
+    // height: 100px;
+    padding: 10px 12px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 14px;
+    user-select: none;
+
+    background-color: var(--main-color-ultra-light);
+
+
+    .symbol24 {
+        margin: 2px;
+        cursor: pointer;
+        &:hover {
+            // filter: drop-shadow(0 0 min(3px, 3px) rgba(0,0,0,0.9));
+            transform: scale(1.2);
+        }
+    }
+
+}
+
+
+
+
 
 body.dark {
     .card-submit-cost-symbols {
+        background-color: var(--main-color-ultra-dark);
+    }
+    .MTGEditor-toolbar {
         background-color: var(--main-color-ultra-dark);
     }
 }

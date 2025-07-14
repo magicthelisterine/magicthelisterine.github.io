@@ -29,9 +29,7 @@ $data = [
         <table>
             <tr>
                 <td rowspan="7">
-
                     <div class="dnd-file" id="dnd" title="Déposez une image ici ou cliquez pour choisir un fichier">Déposez une image ici<br>ou<br>Cliquez pour choisir un fichier</div>
-
                 </td>
                 <td>
                     <input type="text" placeholder="Nom de la carte">
@@ -71,6 +69,18 @@ $data = [
             <tr>
                 <td class="cost-input">
                     <input type="text" placeholder="Coût" autocomplete="off" pattern="[0-9rgubwxyzRGUBWXYZ\{\}]+"  title="Seuls les lettres RGUBWXYZ, les chiffres et les accolades {} sont permis." id="costInput"><div id="costRender" class="cost-render"></div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea id="desc" name="desc" id="" rows="10" placeholder="Description de la carte"></textarea>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2">
+                    <textarea id="flavor" name="flavor" id="" rows="5" placeholder="Saveur de la carte"></textarea>
                 </td>
             </tr>
 
