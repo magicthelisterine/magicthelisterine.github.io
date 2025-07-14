@@ -22,9 +22,15 @@ const HintSymbols = {
         const symbols = ["U", "G", "B", "W", "R", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "2B", "2G", "2R", "2U", "2W", "BG", "BR", "GU", "GW", "RG", "RW", "UB", "UR", "WB", "WU", "X", "Y", "Z"];
 
         symbols.forEach(v =>  {
-            // console.log(v);
-            hintBox.create('div', 'symbol24 icon-' + v);
+            const btn = hintBox.create('div', 'symbol24 icon-' + v);
+            btn.bind('click', evt => {
+                input.value += '{' + v + '}';
+            });
+        });
 
+
+        input.bind('input', evt => {
+            console.log(input.value);
         });
 
 

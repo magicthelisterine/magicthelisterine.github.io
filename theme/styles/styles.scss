@@ -60,6 +60,11 @@ $color_red_hex: unquote('#{str-slice(ie-hex-str($color_red), 4)}');
     --main-color-light-alpha8: #{color.adjust($main_color, $lightness: 25%, $alpha: -0.8)};
     --main-color-light-alpha9: #{color.adjust($main_color, $lightness: 25%, $alpha: -0.9)};
 
+    
+    --main-color-ultra-light: #{lighten($main_color, 65%)};
+    --main-color-ultra-dark: #{color.adjust($main_color, $blackness: 45%)};
+    
+
     --main-color-back-light: #{lighten($main_color, 45%)};
     --main-color-gradient-light: #{lighten($main_color, 10%)};
     --main-color-label-light: #{lighten($main_color, 20%)};
@@ -196,7 +201,7 @@ body.dark .card-submit-container table tr:nth-child(even) td {
     
 
     .dnd-file {
-        border: 1px solid var(--main-color-grey-light);
+        border: 2px solid var(--main-color-grey-light);
         // position: relative;
         // width: 200px;
         width: 100%;
@@ -235,7 +240,8 @@ body.dark .card-submit-container table tr:nth-child(even) td {
 .card-submit-cost-symbols {
     position: absolute;
     display: none;
-    background-color: #f1f1f1;
+    // background-color: #f1f1f1;
+    background-color: var(--main-color-ultra-light);
     padding: 10px 12px;
     border: 1px solid #aaa;
     border-radius: 5px;
@@ -248,7 +254,8 @@ body.dark .card-submit-container table tr:nth-child(even) td {
         margin: 5px;
         cursor: pointer;
         &:hover {
-            filter: drop-shadow(0 0 min(2px, 2px) rgba(0,0,0,0.8));
+            // filter: drop-shadow(0 0 min(3px, 3px) rgba(0,0,0,0.9));
+            transform: scale(1.2);
         }
     }
     
@@ -258,9 +265,13 @@ body.dark .card-submit-container table tr:nth-child(even) td {
 
 
 
-
+body.dark {
+    .card-submit-cost-symbols {
+        background-color: var(--main-color-ultra-dark);
+    }
+}
 
 
 body.dark .dnd-file {
-    border: 1px solid var(--main-color-grey-dark);
+    border: 2px solid var(--main-color-grey-dark);
 }
