@@ -30,7 +30,7 @@ $data = [
             <tr>
                 <td rowspan="7">
 
-                    <div class="dnd-file" id="dnd">Glissez votre image ici</div>
+                    <div class="dnd-file" id="dnd">Déposez une image ici<br>ou<br>cliquez pour choisir un fichier</div>
 
                 </td>
                 <td>
