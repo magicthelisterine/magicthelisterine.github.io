@@ -21,13 +21,28 @@ const HintSymbols = {
 
         // hintBox.innerHTML = '✨ Message d’aide qui flotte par-dessus tout, même hors conteneur.';
 
-        const btn = hintBox.create('div', 'card-submit-cost-symbols-btn');
-        btn.bind('click', (evt) => {
-            // console.log(input.value);
+        const btn = hintBox.create('div', 'symbol24 icon-B');
+        hintBox.create('div', 'symbol24 icon-G');
+        hintBox.create('div', 'symbol24 icon-R');
+        hintBox.create('div', 'symbol24 icon-U');
+        hintBox.create('div', 'symbol24 icon-W');
+        hintBox.create('div', 'symbol24 icon-0');
+        hintBox.create('div', 'symbol24 icon-1');
+        hintBox.create('div', 'symbol24 icon-2');
+        hintBox.create('div', 'symbol24 icon-3');
+        hintBox.create('div', 'symbol24 icon-4');
+        hintBox.create('div', 'symbol24 icon-5');
+        hintBox.create('div', 'symbol24 icon-6');
+        hintBox.create('div', 'symbol24 icon-7');
+        hintBox.create('div', 'symbol24 icon-8');
+        hintBox.create('div', 'symbol24 icon-9');
 
-            input.value += 'a';
+        // btn.bind('click', (evt) => {
+        //     // console.log(input.value);
 
-        });
+        //     input.value += 'a';
+
+        // });
 
 
 
