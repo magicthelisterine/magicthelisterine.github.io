@@ -6,6 +6,8 @@ function getSimpleHtml() {
   let html = '';
   let listStack = [];
   let openListItem = false;
+  let insideHighlightBlock = false;
+  let highlightBuffer = '';
 
   for (let i = 0; i < numChildren; i++) {
     const element = body.getChild(i);
@@ -53,6 +55,23 @@ function getSimpleHtml() {
 
       const paragraph = element.asParagraph();
       const heading = paragraph.getHeading();
+      const rawText = stripTextContent(paragraph).trim();
+
+      if (rawText.startsWith('<highlight')) {
+        insideHighlightBlock = true;
+        highlightBuffer = rawText + '\n';
+        continue;
+      }
+
+      if (insideHighlightBlock) {
+        highlightBuffer += rawText + '\n';
+        if (rawText.endsWith('</highlight>')) {
+          html += highlightBuffer;
+          highlightBuffer = '';
+          insideHighlightBlock = false;
+        }
+        continue;
+      }
 
       if (heading === DocumentApp.ParagraphHeading.TITLE || heading === DocumentApp.ParagraphHeading.SUBTITLE) {
         continue;
@@ -143,6 +162,19 @@ function parseStyledTextWithBreaks(container) {
   return html;
 }
 
+function stripTextContent(container) {
+  let text = '';
+  for (let i = 0; i < container.getNumChildren(); i++) {
+    const child = container.getChild(i);
+    if (child.getType() === DocumentApp.ElementType.TEXT) {
+      text += child.asText().getText();
+    } else if (child.getNumChildren && child.getNumChildren() > 0) {
+      text += stripTextContent(child);
+    }
+  }
+  return text;
+}
+
 function headingToTag(heading) {
   switch (heading) {
     case DocumentApp.ParagraphHeading.HEADING1: return 'grostitre';
@@ -155,11 +187,11 @@ function headingToTag(heading) {
 }
 
 function escapeHtml(text) {
-  const allowedTags = ['table', 'thead', 'tbody', 'tfoot', 'tr', 'td', 'th', 'dots', 'checklist', 'box'];
+  const allowedTags = ['table', 'thead', 'tbody', 'tfoot', 'tr', 'td', 'th', 'dots', 'checklist', 'box', 'highlight'];
 
   return text.replace(/<\/?([a-zA-Z0-9\-]+)(\s[^>]*)?>/g, (match, tagName) => {
     if (allowedTags.includes(tagName.toLowerCase())) {
-      return match; // laisser intact
+      return match;
     }
     return match.replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }).replace(/&/g, '&amp;')
