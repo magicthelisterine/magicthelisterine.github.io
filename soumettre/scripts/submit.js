@@ -19,39 +19,20 @@ const HintSymbols = {
         const hintBox = document.body.create('div', 'card-submit-cost-symbols');
         const input = document.getElementById('myInput');
 
-        // hintBox.innerHTML = '✨ Message d’aide qui flotte par-dessus tout, même hors conteneur.';
+        const symbols = ["U", "G", "B", "W", "R", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "2B", "2G", "2R", "2U", "2W", "BG", "BR", "GU", "GW", "RG", "RW", "UB", "UR", "WB", "WU", "X", "Y", "Z"];
 
-        const btn = hintBox.create('div', 'symbol24 icon-B');
-        hintBox.create('div', 'symbol24 icon-G');
-        hintBox.create('div', 'symbol24 icon-R');
-        hintBox.create('div', 'symbol24 icon-U');
-        hintBox.create('div', 'symbol24 icon-W');
-        hintBox.create('div', 'symbol24 icon-0');
-        hintBox.create('div', 'symbol24 icon-1');
-        hintBox.create('div', 'symbol24 icon-2');
-        hintBox.create('div', 'symbol24 icon-3');
-        hintBox.create('div', 'symbol24 icon-4');
-        hintBox.create('div', 'symbol24 icon-5');
-        hintBox.create('div', 'symbol24 icon-6');
-        hintBox.create('div', 'symbol24 icon-7');
-        hintBox.create('div', 'symbol24 icon-8');
-        hintBox.create('div', 'symbol24 icon-9');
+        symbols.forEach(v =>  {
+            // console.log(v);
+            hintBox.create('div', 'symbol24 icon-' + v);
 
-        // btn.bind('click', (evt) => {
-        //     // console.log(input.value);
-
-        //     input.value += 'a';
-
-        // });
-
-
+        });
 
 
         let blockBlur = false;
 
         function positionHintBox() {
             hintBox.style.display = 'block';
-            hintBox.style.visibility = 'hidden'; // pour mesurer la hauteur sans clignoter
+            hintBox.style.visibility = 'hidden';
 
             const rect = input.getBoundingClientRect();
             const hintHeight = hintBox.offsetHeight;
