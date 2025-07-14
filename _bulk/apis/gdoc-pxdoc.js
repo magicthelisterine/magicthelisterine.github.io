@@ -1,3 +1,9 @@
+/**
+ * Google Docs to PXDoc 
+ * Version: 8.0
+ * Autheur: Maxime Larrivée-Roy
+ */
+
 function getSimpleHtml() {
   const doc = DocumentApp.getActiveDocument();
   const body = doc.getBody();

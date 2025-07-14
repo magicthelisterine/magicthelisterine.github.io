@@ -54,7 +54,7 @@
             <tr>
                 <td rowspan="7">
 
-                    <div class="dnd-file"></div>
+                    <div class="dnd-file" id="dnd">Glissez votre image ici</div>
 
                 </td>
                 <td>
@@ -93,8 +93,8 @@
                 </td>
             </tr>
             <tr>
-                <td>
-                    <input type="text" placeholder="Coût" autocomplete="off" id="myInput">
+                <td class="cost-input">
+                    <input type="text" placeholder="Coût" autocomplete="off" pattern="[0-9rgubwxyzRGUBWXYZ\{\}]+"  title="Seuls les lettres RGUBWXYZ, les chiffres et les accolades {} sont permis." id="costInput"><div id="costRender" class="cost-render"></div>
                 </td>
             </tr>
 
@@ -105,7 +105,7 @@
 </div>
 
 <script src="./scripts/submit.min.js"></script>
-<script>ready(evt => { SubmitForm.init(); });</script>
+<script>ready(evt => { SubmitForm.init({"series":["IRL \/ Animaux","IRL \/ Historiques","IRL \/ Influenceurs","IRL \/ Lieux & R\u00e9gions","IRL \/ Misc","IRL \/ People & Society","IRL \/ Politique","IRL \/ Sports","IRL \/ US Politics","Culture Keb \/ Cin\u00e9ma & T\u00e9l\u00e9","Culture Keb \/ Cin\u00e9ma & T\u00e9l\u00e9 \/ Lance & Compte","Culture Keb \/ Cin\u00e9ma & T\u00e9l\u00e9 \/ M+","Culture Keb \/ Humoristes","Culture Keb \/ M\u00e8mes","Culture Keb \/ Musique","Culture Keb \/ Nostalgie","Cluture Keb \/ Nostalgie \/ DUGPDCV","Culture Keb \/ Mythes et L\u00e9gendes","Culture Keb \/ Web"],"supertypes":["Basic","Legendary","Token"],"types":["Artifact","Creature","Enchantment","Instant","Land","Plainswalker","Sorcery"]}); });</script>
 
 
 

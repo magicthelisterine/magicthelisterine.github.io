@@ -7,6 +7,21 @@
  * @image    ../assets/images/og-image.webp
  * @abstract Formulaire de soumission de carte
  */
+
+$datadir = $PAGE->root . 'data/';
+$series = json_decode(file_get_contents($datadir . 'series.json'));
+$supertypes = json_decode(file_get_contents($datadir . 'supertypes.json'));
+$types = json_decode(file_get_contents($datadir . 'types.json'));
+
+$data = [
+    "series" => $series,
+    "supertypes" => $supertypes,
+    "types" => $types,
+];
+
+
+// __print_r($data);
+
 ?>
 
 <div class="card-submit-container">
@@ -15,7 +30,7 @@
             <tr>
                 <td rowspan="7">
 
-                    <div class="dnd-file"></div>
+                    <div class="dnd-file" id="dnd">Glissez votre image ici</div>
 
                 </td>
                 <td>
@@ -54,8 +69,8 @@
                 </td>
             </tr>
             <tr>
-                <td>
-                    <input type="text" placeholder="Coût" autocomplete="off" id="myInput">
+                <td class="cost-input">
+                    <input type="text" placeholder="Coût" autocomplete="off" pattern="[0-9rgubwxyzRGUBWXYZ\{\}]+"  title="Seuls les lettres RGUBWXYZ, les chiffres et les accolades {} sont permis." id="costInput"><div id="costRender" class="cost-render"></div>
                 </td>
             </tr>
 
@@ -66,7 +81,7 @@
 </div>
 
 <script src="./scripts/submit.min.js"></script>
-<script>ready(evt => { SubmitForm.init(); });</script>
+<script>ready(evt => { SubmitForm.init(<?php echo json_encode($data, JSON_NUMERIC_CHECK); ?>); });</script>
 
 
 
