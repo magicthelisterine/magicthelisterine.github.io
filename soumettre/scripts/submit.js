@@ -136,37 +136,39 @@ const DropImage = {
             this.div.classList.remove('dragover');
         });
 
-
         this.div.addEventListener('drop', (e) => {
             e.preventDefault();
             this.div.classList.remove('dragover');
-          
             const files = e.dataTransfer.files;
             if (files.length > 0) {
-              this.handleFile(files[0]);
+                this.handleFile(files[0]);
             }
-          });
-          
+        });
 
-
-
-
+        this.div.addEventListener('click', evt => {
+            browse('image/*', (evt) => {
+                   if (evt.target.files.length > 0) {
+                    this.handleFile(evt.target.files[0]);
+                }
+            });
+        });
 
     },
 
 
 
-    handleFile: function(file) {
-        if (file.type.startsWith('image/')) {
-          const reader = new FileReader();
-          reader.onload = (e) => {
-            this.div.style.setProperty('--bg-image', `url("${e.target.result}")`);
-          };
-          reader.readAsDataURL(file);
+    handleFile: function (file) {
+        // console.log(file);
+        if (file.type.startsWith('image/') && file.size <= 5242880) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                this.div.style.setProperty('--bg-image', `url("${e.target.result}")`);
+            };
+            reader.readAsDataURL(file);
         } else {
-            console.log('Fichier non supporté');
+            // console.log('Fichier non supporté');
         }
-      }
+    }
 
 
 
