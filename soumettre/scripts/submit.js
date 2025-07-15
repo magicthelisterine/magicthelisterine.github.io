@@ -5,6 +5,7 @@ const SubmitForm = {
     type: null,
     dnd: null,
     desc: null,
+    submitbtn: null,
 
 
     init: function (data) {
@@ -14,6 +15,7 @@ const SubmitForm = {
         this.supertype = document.getElementById('supertype');
         this.type = document.getElementById('type');
         this.desc = document.getElementById('desc');
+        this.submitbtn = document.getElementById('submit-btn');
         this.fillSerie(data.series);
         this.fillSuperType(data.supertypes);
         this.fillType(data.types);
@@ -53,8 +55,17 @@ const SubmitForm = {
             this.type.append(option);
         });
     },
-}
 
+
+    progress: function(progress) {
+        
+        console.log(progress);
+        // if(progress < 1) this.submitbtn.disabled = true;
+        this.submitbtn.disabled = progress < 1 ? true : false;
+
+    },
+}
+window.SubmitForm = SubmitForm;
 
 
 
@@ -191,7 +202,6 @@ const MTGEditor = {
 
         this.symbols.forEach(v => {
             const btn = this.toolbar.create('div', 'symbol24 icon-' + v);
-            console.log("patate");
             btn.bind('click', evt => {
                 if (v == 'I') this.wrapItalic();
                 else this.insert('{' + v + '}');

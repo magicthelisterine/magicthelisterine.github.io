@@ -24,6 +24,18 @@ $data = [
 
 ?>
 
+
+
+
+<p>Vous avez toutes vos informations en main ? Le nom, la force, l’image… tout est prêt ? Alors remplissez ce formulaire mystique et donnez naissance à votre propre carte légendaire.</p>
+
+<p>Pour vous aider, nous avons mis à votre disposition un peu de documentation dans le Journal de bord.</p>
+
+<!-- <intlink href="../journal/"></intlink> -->
+<boxlink href="../journal/"></boxlink>
+<br>
+<hr>
+
 <div class="card-submit-container">
     <form>
         <table>
@@ -72,12 +84,10 @@ $data = [
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
+                <td colspan="2" class="MTGEditor-container">
                     <textarea id="desc" name="desc" id="" rows="10" placeholder="Description de la carte"></textarea>
                 </td>
             </tr>
-
-
             <tr>
                 <td colspan="2">
                     <textarea id="flavor" name="flavor" id="" rows="5" placeholder="Saveur de la carte"></textarea>
@@ -85,10 +95,40 @@ $data = [
             </tr>
 
         </table>
+        
+        <br>
+        <hr>
+        <br>
+
+
+        <h2>Révision</h2>
+        <checklist memory="false" callback="SubmitForm.progress">
+            J’ai sélectionné une image pour ma carte.
+            Le nom de la carte est entré et ne contient pas de fautes.
+            J’ai choisi la série, le supertype, le type et le sous-type appropriés.
+            Le coût de mana est complet et cohérent avec la carte.
+            Les valeurs de Force et d’Endurance sont présentes (si nécessaire).
+            Le texte de règle est clair, bien écrit et respecte les conventions.
+            J’ai ajouté un texte de saveur (facultatif, mais recommandé).
+            Je confirme que l’image utilisée est libre de droit ou que j’en détiens les droits.
+            Je consens à ce que les réviseurs puissent modifier l’image, le texte ou le design de la carte pour assurer la cohérence avec le reste du projet.
+            Je suis prêt(e) à générer ma carte et à l’envoyer pour révision.
+        </checklist>
+
+        <hr>
+
+        <div class="submit-btn">
+            <input type="submit" value="Soumettre" id="submit-btn" disabled="true">
+        </div>
+
+
     </form>
-
-
 </div>
+
+
+
+
+
 
 <script src="./scripts/submit.min.js"></script>
 <script>ready(evt => { SubmitForm.init(<?php echo json_encode($data, JSON_NUMERIC_CHECK); ?>); });</script>
