@@ -1,5 +1,6 @@
 const SubmitForm = {
     data: null,
+    name: null,
     serie: null,
     supertype: null,
     type: null,
@@ -11,6 +12,7 @@ const SubmitForm = {
     init: function (data) {
         this.data = data;
         this.dnd = document.getElementById('dnd');
+        this.name = document.getElementById('name');
         this.serie = document.getElementById('serie');
         this.supertype = document.getElementById('supertype');
         this.type = document.getElementById('type');
@@ -20,7 +22,7 @@ const SubmitForm = {
         this.fillSuperType(data.supertypes);
         this.fillType(data.types);
 
-
+        bind('.card-submit-container form', 'submit', (evt) => { evt.preventDefault(); this.submit(); });
 
 
         DropImage.init(this.dnd);
@@ -58,11 +60,19 @@ const SubmitForm = {
 
 
     progress: function(progress) {
-        
-        console.log(progress);
-        // if(progress < 1) this.submitbtn.disabled = true;
         this.submitbtn.disabled = progress < 1 ? true : false;
+    },
 
+
+    submit: function() {
+
+        if(!DropImage.value) {
+            DropImage.div.classList.add('dragover');
+            scrollTo(DropImage.div);
+            return;
+        }
+    
+        console.log(this.serie.value);
     },
 }
 window.SubmitForm = SubmitForm;
@@ -166,21 +176,24 @@ const DropImage = {
                     this.handleFile(evt.target.files[0]);
                 }
             });
+            this.div.classList.remove('dragover');
         });
 
     },
 
     handleFile: function (file) {
-        // console.log(file);
         if (file.type.startsWith('image/') && file.size <= 5242880) {
             const reader = new FileReader();
             reader.onload = (e) => {
-                this.value = e.target.result;
+                this.value = {
+                    name: file.name,
+                    size: file.size,
+                    type: file.type,
+                    contents: e.target.result
+                };
                 this.div.style.setProperty('--bg-image', `url("${e.target.result}")`);
             };
             reader.readAsDataURL(file);
-        } else {
-            // console.log('Fichier non supporté');
         }
     }
 

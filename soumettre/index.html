@@ -49,8 +49,6 @@
                 <div id="contents">
 
 
-
-
 <p>Vous avez toutes vos informations en main ? Le nom, la force, l’image… tout est prêt ? Alors remplissez ce formulaire mystique et donnez naissance à votre propre carte légendaire.</p>
 
 <p>Pour vous aider, nous avons mis à votre disposition un peu de documentation dans le Journal de bord.</p>
@@ -83,48 +81,48 @@
                     <div class="dnd-file" id="dnd" title="Déposez une image ici ou cliquez pour choisir un fichier">Déposez une image ici<br>ou<br>Cliquez pour choisir un fichier</div>
                 </td>
                 <td>
-                    <input type="text" placeholder="Nom de la carte">
+                    <input type="text" placeholder="Nom de la carte" name="name" id="name" required>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <select name="serie" id="serie">
+                    <select name="serie" id="serie" required>
                         <option value="">--- Série ---</option>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <select name="supertype" id="supertype">
+                    <select name="supertype" id="supertype" required>
                         <option value="">--- Super type ---</option>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <select name="type" id="type">
+                    <select name="type" id="type" required>
                         <option value="">--- Type ---</option>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="text" placeholder="Sous-type" id="subtype">
+                    <input type="text" placeholder="Sous-type" id="subtype" required>
                 </td>
             </tr>
             <tr>
                 <td class="pt-input">
-                    <input type="number" placeholder="Force" min="0" max="12" id="power">&nbsp;<strong>/</strong>&nbsp;<input type="number" placeholder="Endurance" min="0" max="12" id="toughness">
+                    <input type="number" placeholder="Force" min="0" max="12" id="power" required>&nbsp;<strong>/</strong>&nbsp;<input type="number" placeholder="Endurance" min="0" max="12" id="toughness" required>
                 </td>
             </tr>
             <tr>
                 <td class="cost-input">
-                    <input type="text" placeholder="Coût" autocomplete="off" pattern="[0-9rgubwxyzRGUBWXYZ\{\}]+"  title="Seuls les lettres RGUBWXYZ, les chiffres et les accolades {} sont permis." id="costInput"><div id="costRender" class="cost-render"></div>
+                    <input type="text" placeholder="Coût" autocomplete="off" pattern="[0-9rgubwxyzRGUBWXYZ\{\}]+"  title="Seuls les lettres RGUBWXYZ, les chiffres et les accolades {} sont permis." id="costInput" required><div id="costRender" class="cost-render"></div>
                 </td>
             </tr>
             <tr>
                 <td colspan="2" class="MTGEditor-container">
-                    <textarea id="desc" name="desc" id="" rows="10" placeholder="Description de la carte"></textarea>
+                    <textarea id="desc" name="desc" id="" rows="10" placeholder="Description de la carte" required></textarea>
                 </td>
             </tr>
             <tr>
@@ -135,12 +133,10 @@
 
         </table>
         
-        <br>
-        <hr>
-        <br>
-
+        <br><hr><br>
 
         <h2>Révision</h2>
+
         <checklist memory="false" callback="SubmitForm.progress">
             J’ai sélectionné une image en format <em>4/3</em> pour ma carte.
             Le nom de la carte est entré et ne contient <em>pas</em> de fautes.
@@ -157,7 +153,7 @@
         <hr>
 
         <div class="submit-btn">
-            <input type="submit" value="Soumettre" id="submit-btn" disabled="true">
+            <input type="submit" value="Soumettre" id="submit-btn" disabled>
         </div>
 
 
