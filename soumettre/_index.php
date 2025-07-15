@@ -103,15 +103,15 @@ $data = [
 
         <h2>Révision</h2>
         <checklist memory="false" callback="SubmitForm.progress">
-            J’ai sélectionné une image pour ma carte.
-            Le nom de la carte est entré et ne contient pas de fautes.
+            J’ai sélectionné une image en format <em>4/3</em> pour ma carte.
+            Le nom de la carte est entré et ne contient <em>pas</em> de fautes.
             J’ai choisi la série, le supertype, le type et le sous-type appropriés.
-            Le coût de mana est complet et cohérent avec la carte.
+            Le coût de mana est complet et <em>cohérent</em> avec la carte.
             Les valeurs de Force et d’Endurance sont présentes (si nécessaire).
-            Le texte de règle est clair, bien écrit et respecte les conventions.
+            Le texte de règle est clair, bien écrit et <em>respecte</em> les conventions.
             J’ai ajouté un texte de saveur (facultatif, mais recommandé).
-            Je confirme que l’image utilisée est libre de droit ou que j’en détiens les droits.
-            Je consens à ce que les réviseurs puissent modifier l’image, le texte ou le design de la carte pour assurer la cohérence avec le reste du projet.
+            Je confirme que l’image utilisée est <em>libre de droit</em> ou que j’en détiens les droits.
+            Je consens à ce que les réviseurs puissent modifier l’image, le texte ou le design de la carte pour assurer la <em>cohérence</em> avec le reste du projet.
             Je suis prêt(e) à générer ma carte et à l’envoyer pour révision.
         </checklist>
 
