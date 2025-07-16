@@ -21,7 +21,7 @@
         <meta property="og:title" content="Soumettre une carte | Magic The Listerine">
         <meta property="og:description" content="Formulaire de soumission de carte">
         <meta property="og:url" content="https://magicthelisterine.github.io/soumettre/">
-        <meta property="og:image" content="https://magicthelisterine.github.io/assets/images/og-image.webp">
+        <meta property="og:image" content="https://magicthelisterine.github.io/soumettre/images/image.webp">
         <link rel="icon" type="image/x-icon" href="../pxdoc/images/favicon.ico">
         <link rel="stylesheet" href="../pxdoc/styles/styles.min.css">
         <link rel="stylesheet" href="../theme/styles/styles.min.css">
@@ -30,6 +30,7 @@
         <script src="../pxdoc/jscripts/swiper-bundle.min.js"></script>
         <script src="../pxdoc/jscripts/vue.global.prod.js"></script>
         <script src="../pxdoc/jscripts/pxdoc.min.js"></script>
+        <script src="../theme/scripts/brainstorm.min.js"></script>
         <title>Soumettre une carte</title>
     </head>
     <body>
@@ -53,13 +54,6 @@
 
 <p>Pour vous aider, nous avons mis à votre disposition un peu de documentation dans le Journal de bord.</p>
 
-<!--         <div class="intlink__item">
-            <div class="intlink__item__icon" style="background-image: url(../journal/images/icon.webp);"></div>
-            <div class="intlink__item__description">
-                <span class="intlink__item__title"><a href="../journal/">Journal</a></span>
-                <span class="intlink__item__abstract">Journal de bord du projet</span>
-            </div>
-        </div> -->
         <a class="boxlink" rel="noopener noreferrer" target="_self" href="../journal/" title="Journal">
             <div class="boxlink-container">
                 <div class="boxlink-thumb" style="background-image: url(../journal/images/image.webp)"></div>
@@ -93,7 +87,7 @@
             </tr>
             <tr>
                 <td>
-                    <select name="supertype" id="supertype" required>
+                    <select name="supertype" id="supertype">
                         <option value="">--- Super type ---</option>
                     </select>
                 </td>
@@ -117,7 +111,7 @@
             </tr>
             <tr>
                 <td class="cost-input">
-                    <input type="text" placeholder="Coût" autocomplete="off" pattern="[0-9rgubwxyzRGUBWXYZ\{\}]+"  title="Seuls les lettres RGUBWXYZ, les chiffres et les accolades {} sont permis." id="costInput" required><div id="costRender" class="cost-render"></div>
+                    <input type="text" placeholder="Coût" autocomplete="off" pattern="[0-9crgubwxyzCRGUBWXYZ\{\}]+"  title="Seuls les lettres RGUBWXYZ, les chiffres et les accolades {} sont permis." id="costInput" required><div id="costRender" class="cost-render"></div>
                 </td>
             </tr>
             <tr>

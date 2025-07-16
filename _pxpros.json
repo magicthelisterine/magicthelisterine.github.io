@@ -13,5 +13,6 @@
     ],
     "before": "pxdoc/_includes/before.php",
     "after": "pxdoc/_includes/after.php",
-    "styles": "theme/styles/styles.min.css"
+    "styles": "theme/styles/styles.min.css",
+    "scripts": "theme/scripts/brainstorm.min.js"
 }

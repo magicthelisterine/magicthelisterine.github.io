@@ -4,7 +4,7 @@
  * @type     article
  * @title    Soumettre une carte
  * @icon     images/icon.webp
- * @image    ../assets/images/og-image.webp
+ * @image    images/image.webp
  * @abstract Formulaire de soumission de carte
  */
 
@@ -19,9 +19,6 @@ $data = [
     "types" => $types,
 ];
 
-
-// __print_r($data);
-
 ?>
 
 
@@ -29,7 +26,6 @@ $data = [
 
 <p>Pour vous aider, nous avons mis à votre disposition un peu de documentation dans le Journal de bord.</p>
 
-<!-- <intlink href="../journal/"></intlink> -->
 <boxlink href="../journal/"></boxlink>
 <br>
 <hr>
@@ -54,7 +50,7 @@ $data = [
             </tr>
             <tr>
                 <td>
-                    <select name="supertype" id="supertype" required>
+                    <select name="supertype" id="supertype">
                         <option value="">--- Super type ---</option>
                     </select>
                 </td>
@@ -78,7 +74,7 @@ $data = [
             </tr>
             <tr>
                 <td class="cost-input">
-                    <input type="text" placeholder="Coût" autocomplete="off" pattern="[0-9rgubwxyzRGUBWXYZ\{\}]+"  title="Seuls les lettres RGUBWXYZ, les chiffres et les accolades {} sont permis." id="costInput" required><div id="costRender" class="cost-render"></div>
+                    <input type="text" placeholder="Coût" autocomplete="off" pattern="[0-9crgubwxyzCRGUBWXYZ\{\}]+"  title="Seuls les lettres RGUBWXYZ, les chiffres et les accolades {} sont permis." id="costInput" required><div id="costRender" class="cost-render"></div>
                 </td>
             </tr>
             <tr>
