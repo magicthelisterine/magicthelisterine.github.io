@@ -106,9 +106,7 @@ const SubmitForm = {
             };
             this.loadingModal.show();
             Brainstorm.addCard(values).then(data => {
-                
                 this.loadingModal.hide();
-
                 if(data.success) {
                     MessageModal.thumbsup('Bravo! Votre carte vient d’être envoyée dans le Plan Astral du comité éditorial. Si elle survit au sort de Contrebullshit, elle sera publiée bientôt.', () => {
                         document.location.href = '../';
@@ -116,14 +114,10 @@ const SubmitForm = {
                 } else {
                     MessageModal.error(`Une erreur s'est produite.<br>${data.errmsg}`);
                 }
-
             });
 
         });
         
-        
-        
-
     },
 }
 window.SubmitForm = SubmitForm;
