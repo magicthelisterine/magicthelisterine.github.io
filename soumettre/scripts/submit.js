@@ -112,7 +112,7 @@ const SubmitForm = {
                         document.location.href = '../';
                     });
                 } else {
-                    MessageModal.error(`Une erreur s'est produite.<br>${data.errmsg}`);
+                    MessageModal.alert(`Une erreur s'est produite.<br>${data.errmsg}`);
                 }
             });
 

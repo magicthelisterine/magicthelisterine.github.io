@@ -1,6 +1,4 @@
-// const BRAINSTORM_API = 'AKfycbzbVdYrHLR6De7I7L9wlQUpGTsPkWVQsu4iUdlihO9Zbf2H2-KpM1rLWMS6vtcXKmvHWw';
-// const BRAINSTORM_API = 'AKfycbysPx5mi9ux7T82eyo0RMG0bS79LxAiOXUJMTbangYPW2eMGAqwyevKnbN_n7dZ7wQ4Gg';
-const BRAINSTORM_API = 'AKfycbzg4aFxpiBguq7AuHkSXYWcthT2uLKLzX2-UhqmJz_zgMPdeI3CrWdUOo5M0IBw6RecoA';
+const BRAINSTORM_API = 'AKfycbxlWyJ4IWnIONnh9tBgkHi8fmSkHjjNqQ7sfiHdmrYQwbK2rgFmKBdi6YtoXdDf4HXG';
 
 const Brainstorm = {
 
