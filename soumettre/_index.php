@@ -8,7 +8,7 @@
  * @abstract Formulaire de soumission de carte
  */
 
-$datadir = $PAGE->root . 'data/';
+$datadir = $PAGE->root . 'assets/data/';
 $series = json_decode(file_get_contents($datadir . 'series.json'));
 $supertypes = json_decode(file_get_contents($datadir . 'supertypes.json'));
 $types = json_decode(file_get_contents($datadir . 'types.json'));

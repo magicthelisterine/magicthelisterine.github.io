@@ -3,6 +3,17 @@ const BRAINSTORM_API = 'AKfycbxlWyJ4IWnIONnh9tBgkHi8fmSkHjjNqQ7sfiHdmrYQwbK2rgFm
 const Brainstorm = {
 
 
+    getCards: function() {
+        return this.httpGET().then(result => {
+            if(result.success) {
+                return {
+                    success: true,
+                    rows: result.data.rows
+                }
+            } else return result;
+        });
+    },
+
 
 
     addCard: function(data) {
@@ -24,7 +35,39 @@ const Brainstorm = {
     },
 
 
-    httpGET: function(args = null) {
+    httpGET: async function(args = null) {
+
+        const url = 'https://script.google.com/macros/s/' + BRAINSTORM_API + '/exec'
+        // await sleep(1000);
+        // const url = root + 'assets/data/cards.json';
+        return fetch(url)
+        .then((response) => {
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            return response.text();
+        })
+        .then((responseData) => {
+            let response = JSON.parse(responseData);
+            if(response.status == undefined) return {
+                success: false,
+                errmsg: "Réponse du serveur invalide."
+            };
+            if(response.status != 'success') return {
+                success: false,
+                errmsg: response.message
+            };
+            return {
+                success: true,
+                data: response
+            };
+        })
+        .catch((err) => {
+            return {
+                success: false,
+                errmsg: err.message,
+            }
+        });
+
+
 
     },
 
