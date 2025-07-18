@@ -5,10 +5,15 @@
     width: 100%;
     max-width: 770px;
     margin: auto;
-    padding: 0 10px;
+    // padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    
 
     @media (min-width: 576px)  {
         grid-template-columns: 50% 50%;
+        padding-right: 20px;
     }
 
     &__item {
@@ -20,9 +25,10 @@
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: 100% 15%;
-        border: 1px solid var(--main-color-light);
+        // border: 1px solid var(--main-color-light);
         cursor: pointer;
         overflow: hidden;
+        user-select: none;
 
         &:hover {
             background-size: 100% 100%;
@@ -86,7 +92,7 @@
                 &__cost {
                     flex: 1;
                     min-width: calc(50% - 0.4rem);
-                    .symbol20 {
+                    .symbol-1rem {
                         margin-left: 4px;
                     }
                 }
@@ -113,7 +119,7 @@ body.dark .card-grid {
         background-color: var(--main-color-back-dark);
         background-image: linear-gradient(0deg, var(--main-color-gradient-dark), 20%, var(--main-color-back-dark));
         color: var(--color-white-alpha3);
-        border: 1px solid var(--main-color-dark);
+        // border: 1px solid var(--main-color-dark);
     }
 
 }

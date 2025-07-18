@@ -51,7 +51,7 @@ const CardPool = {
         // value = ;
         let htmlRender = '';
         const matches = [...String(value).matchAll(/\{(.*?)\}/g)].map(m => m[1]);
-        matches.forEach(v => { htmlRender += `<div class="symbol20 icon-${v}"></div>`; })
+        matches.forEach(v => { htmlRender += `<div class="symbol-1rem icon-${v}"></div>`; })
         return htmlRender;
     },
 

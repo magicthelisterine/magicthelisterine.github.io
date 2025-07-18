@@ -140,7 +140,7 @@ const HintSymbols = {
         this.cost = document.getElementById('costRender');
 
         this.symbols.forEach(v => {
-            const btn = this.hintBox.create('div', 'symbol24 icon-' + v);
+            const btn = this.hintBox.create('div', 'symbol-24px icon-' + v);
             btn.bind('click', evt => {
                 this.input.value += '{' + v + '}';
                 this.renderCost();
@@ -180,7 +180,7 @@ const HintSymbols = {
     renderCost: function () {
         let htmlRender = '';
         const matches = [...this.input.value.matchAll(/\{(.*?)\}/g)].map(m => m[1]);
-        matches.forEach(v => { htmlRender += `<div class="symbol24 icon-${v}"></div>`; })
+        matches.forEach(v => { htmlRender += `<div class="symbol-24px icon-${v}"></div>`; })
         this.cost.innerHTML = htmlRender;
     },
 
@@ -259,7 +259,7 @@ const MTGEditor = {
         this.elm.parentElement.insertBefore(this.toolbar, this.elm);
 
         this.symbols.forEach(v => {
-            const btn = this.toolbar.create('div', 'symbol24 icon-' + v);
+            const btn = this.toolbar.create('div', 'symbol-24px icon-' + v);
             btn.bind('click', evt => {
                 if (v == 'I') this.wrapItalic();
                 else this.insert('{' + v + '}');

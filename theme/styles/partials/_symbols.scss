@@ -53,13 +53,13 @@
 }
 
 
-$sizes: 20, 24;
+$sizes: 1rem, 24px;
 $icons: C, U, G, B, W, R, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 2B, 2G, 2R, 2U, 2W, BG, BR, GU, GW, RG, RW, UB, UR, WB, WU, X, Y, Z, T, T1, T2, I;
 
 @each $size in $sizes {
-    .symbol#{$size} {
-        width: #{$size}px;
-        height: #{$size}px;
+    .symbol-#{$size} {
+        width: #{$size};
+        height: #{$size};
         display: inline-block;
         position: relative;
         background-size: contain;

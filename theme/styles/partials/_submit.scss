@@ -134,7 +134,7 @@ body.dark .card-submit-container table tr:nth-child(even) td {
             // background-color: red;
             height: 26px;
 
-            .symbol24 {
+            .symbol-24px {
                 margin-left: 4px;
             }
         }
@@ -176,7 +176,7 @@ body.dark .card-submit-container table tr:nth-child(even) td {
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     z-index: 9999;
 
-    .symbol24 {
+    .symbol-24px {
         margin: 5px;
         cursor: pointer;
         &:hover {
@@ -202,8 +202,8 @@ body.dark .card-submit-container table tr:nth-child(even) td {
     background-color: var(--main-color-ultra-light);
 
 
-    .symbol24 {
-        margin: 2px;
+    .symbol-24px {
+        margin: 2.15px;
         cursor: pointer;
         &:hover {
             // filter: drop-shadow(0 0 min(3px, 3px) rgba(0,0,0,0.9));
