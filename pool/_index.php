@@ -15,7 +15,7 @@
             <div class="card-grid__item">
                 <div class="card-grid__item__icon"></div>
                 <div class="card-grid__item__details">
-                    <div class="card-grid__item__details__name">Joseph FacalJoseph FacalJoseph FacalJoseph FacalJoseph FacalJoseph Facal</div>
+                    <div class="card-grid__item__details__name">Joseph Facal</div>
                     <div class="card-grid__item__details__description">Bllip bloupBllip bloupBllip bloupBllip bloupBllip bloupBllip bloupBllip bloupBllip bloupBllip bloup<br>asdf<br>aklsdjgaoeijtaklsdjgaoeijtaklsdjgaoeijtaklsdjgaoeijtaklsd jgaoeijtaklsdjgaoeijtaklsdjgaoeijtaklsdjgaoeijtaklsdjgaoeijtaklsdjgaoeijt</div>
                 </div>
             </div>
