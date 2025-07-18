@@ -2,8 +2,8 @@
 const CACHE = false;
 
 define('ROOT', realpath(__DIR__ . '/../../').'/');
-define('THUMBNAILS_DIR', realpath(ROOT . 'carte/thumbnails') . '/');
-define('ORIGINALS_DIR', realpath(ROOT . 'carte/originals') . '/');
+define('THUMBNAILS_DIR', realpath(ROOT . 'assets/images/cartes/thumbnails') . '/');
+define('ORIGINALS_DIR', realpath(ROOT . 'assets/images/cartes/originals') . '/');
 require_once(realpath(ROOT . 'pxdoc/_bin/scripts/utils.php'));
 require_once(__DIR__ . '/libraries/brainstorm.class.php');
 
@@ -38,7 +38,7 @@ foreach($cards as $card) {
     if(empty($card->image->webp_small)) {
         $name = $card->image->uuid . '_small.webp';
         $dest = THUMBNAILS_DIR . $name;
-        if(!blobToWebp($blob, $dest, 64, 64)) err("Can't save small thumbnail image.");
+        if(!blobToWebp($blob, $dest, 120, 90)) err("Can't save small thumbnail image.");
         
         
         Brainstorm::updateImage($card->image->uuid, [

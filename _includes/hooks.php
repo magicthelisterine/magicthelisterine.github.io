@@ -1,12 +1,26 @@
 <?php
 
 /******************************************************
+ *                  Virgin Page Type                  *
+ ******************************************************/
+register_page_type('virgin', [
+    'header' => [
+        realpath(__DIR__ . '/../pxdoc/_includes/templates/header.php'),
+        realpath(__DIR__ . '/../pxdoc/_includes/templates/header_main.php'),
+    ],
+    'footer' => [
+        realpath(__DIR__ . '/../pxdoc/_includes/templates/footer_main.php'),
+        realpath(__DIR__ . '/../pxdoc/_includes/templates/footer.php'),
+    ],
+]);
+
+
+/******************************************************
  *                 Composante Compdate                *
  ******************************************************/
 register_tag('compdate', function($html, $attrs, $data) {
     return '<time datetime="' . date('Y-m-d H:i:s') . '">' . date('Y-m-d H:i:s') . '</time>';
 });
-
 
 
 /******************************************************
