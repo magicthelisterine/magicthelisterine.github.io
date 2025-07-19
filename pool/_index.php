@@ -1,10 +1,10 @@
 <?php
 /**
  * @type     virgin
- * @title    Suggestions
+ * @title    Pool de suggestions
  * @icon     images/icon.webp
  * @image    images/image.webp
- * @abstract Liste des cartes proposées
+ * @abstract Liste des cartes soumises
  */
 ?>
 

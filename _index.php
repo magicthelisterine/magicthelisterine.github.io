@@ -34,6 +34,7 @@
 <grostitre>Outils</grostitre>
 
 <intlink href="./journal/"></intlink>
+<intlink href="./pool/"></intlink>
 <intlink href="./soumettre/"></intlink>
 
 <dots></dots>
