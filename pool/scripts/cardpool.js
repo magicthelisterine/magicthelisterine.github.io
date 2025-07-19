@@ -125,7 +125,7 @@ const CardPool = {
 
 
     trimBraces: function (str) {
-        return (str.match(/{[^}]*}/g) || []).join('');
+        return (String(str).match(/{[^}]*}/g) || []).join('');
     },
 
 

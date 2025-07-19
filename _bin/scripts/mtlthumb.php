@@ -2,6 +2,7 @@
 const CACHE = false;
 
 define('ROOT', realpath(__DIR__ . '/../../').'/');
+define('DATA_DIR', realpath(ROOT . 'assets/data') . '/');
 define('THUMBNAILS_DIR', realpath(ROOT . 'assets/images/cartes/thumbnails') . '/');
 define('ORIGINALS_DIR', realpath(ROOT . 'assets/images/cartes/originals') . '/');
 require_once(realpath(ROOT . 'pxdoc/_bin/scripts/utils.php'));
@@ -16,6 +17,7 @@ require_once(__DIR__ . '/libraries/brainstorm.class.php');
 // die();
 if(!CACHE) {
     if(!$cards = Brainstorm::getCards()) err("Can't get cards from API.");
+    // file_put_contents(DATA_DIR . 'cards.json', json_encode($cards));
     Cache::set('cards', $cards);
 } else $cards = Cache::get('cards');
 
