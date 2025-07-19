@@ -1,7 +1,7 @@
 .card-grid {
     display: grid;
     grid-template-columns: 100%;
-    grid-gap: 12px;
+    grid-gap: 0.5rem;
     width: 100%;
     max-width: 770px;
     margin: auto;
@@ -92,9 +92,7 @@
                 &__cost {
                     flex: 1;
                     min-width: calc(50% - 0.4rem);
-                    .symbol-1rem {
-                        margin-left: 4px;
-                    }
+
                 }
 
                 :nth-child(2) {
@@ -102,6 +100,9 @@
                 }
                 :nth-child(3) {
                     text-align: right;
+                    .symbol-1em {
+                        margin-left: 4px;
+                    }
                 }
 
             }
@@ -114,12 +115,117 @@
 }
 
 
-body.dark .card-grid {
-    &__item {
-        background-color: var(--main-color-back-dark);
-        background-image: linear-gradient(0deg, var(--main-color-gradient-dark), 20%, var(--main-color-back-dark));
-        color: var(--color-white-alpha3);
-        // border: 1px solid var(--main-color-dark);
+body.dark {
+
+    .card-grid {
+        &__item {
+            background-color: var(--main-color-back-dark);
+            background-image: linear-gradient(0deg, var(--main-color-gradient-dark), 20%, var(--main-color-back-dark));
+            color: var(--color-white-alpha3);
+            // border: 1px solid var(--main-color-dark);
+        }
     }
 
+    .modal .cardinfo {
+        background-color: var(--main-color-gradient-dark);
+        // border: 1px solid var(--main-color-dark);
+    }
+    
+    
+
+}
+
+
+
+.modal .cardinfo {
+    --gap: 1vmin;
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    
+    width: min(85vw, calc(85vh * 63 / 88));
+    height: min(85vh, calc(85vw * 88 / 63));
+    font-size: calc(min(85vw, calc(85vh * 63 / 88)) * 0.05);
+
+    gap: var(--gap);
+    padding: var(--gap);
+
+    background-color: var(--main-color-gradient-light);
+
+    transition-property: transform;
+    transition-duration: 200ms;
+
+
+    user-select: none;
+
+    &__thumb {
+        width: 100%;
+        aspect-ratio: 4/3;
+        background-image: url(../../assets/images/card-back-ntsc-medium.webp);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__power_toughness,
+    &__cost,
+    &__legend,
+    &__name {
+        
+        width: 100%;
+        min-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1em;
+    }
+
+    &__power_toughness,
+    &__legend, &__cost {
+        font-size: 0.8em;
+    }
+
+    &__cost .symbol-1em {
+        // font-size: 0.9em;
+        // margin-top: 0.1em;
+        margin-left: 0.2em;
+    }
+
+    &__description {
+        
+        display: -webkit-box;
+        -webkit-line-clamp: 9;   /* Nombre de lignes max */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.5em;
+
+        hr {
+            margin: 0.5em;
+            border: 1px dashed var(--main-color);
+        }
+
+        .symbol-1em {
+            // font-size: 0.9em;
+            // margin-top: 0.1em;
+            margin-right: 0.2em;
+            margin-left: 0.2em;
+        }
+
+        .line-break {
+            display: block;
+            height: 0.5em; /* Contrôle l'espacement */
+          }
+    }
+
+
+}
+
+.modal.show .cardinfo {
+    transform: translate(-50%, -50%) scale(1);
 }

@@ -37,9 +37,9 @@ const Brainstorm = {
 
     httpGET: async function(args = null) {
 
-        const url = 'https://script.google.com/macros/s/' + BRAINSTORM_API + '/exec'
+        // const url = 'https://script.google.com/macros/s/' + BRAINSTORM_API + '/exec'
         // await sleep(1000);
-        // const url = root + 'assets/data/cards.json';
+        const url = root + 'assets/data/cards.json';
         return fetch(url)
         .then((response) => {
             if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);

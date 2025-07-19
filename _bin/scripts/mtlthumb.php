@@ -24,7 +24,7 @@ if(!CACHE) {
 
 foreach($cards as $card) {
     if(empty($card->image)) continue;
-    if(!empty($card->image->webp_small)) continue; // add more size later
+    if(!empty($card->image->webp_small) && !empty($card->image->webp_medium)) continue; // add more size later
 
     print_r($card);
 
@@ -39,18 +39,18 @@ foreach($cards as $card) {
         $name = $card->image->uuid . '_small.webp';
         $dest = THUMBNAILS_DIR . $name;
         if(!blobToWebp($blob, $dest, 120, 90)) err("Can't save small thumbnail image.");
-        
-        
-        Brainstorm::updateImage($card->image->uuid, [
-            'webp_small' => $name,
-        ]);
-        
-
+        $updatefields['webp_small'] = $name;
     }
     
+    if(empty($card->image->webp_medium)) {
+        $name = $card->image->uuid . '_medium.webp';
+        $dest = THUMBNAILS_DIR . $name;
+        if(!blobToWebp($blob, $dest, 640, 480)) err("Can't save small thumbnail image.");
+        $updatefields['webp_medium'] = $name;
+    }
 
 
-    // break;
+    if(!empty($updatefields)) Brainstorm::updateImage($card->image->uuid, $updatefields);
 }
 
 

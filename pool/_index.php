@@ -59,5 +59,5 @@
 </article> -->
 
 
-<script src="./scripts/cardpool.min.js"></script>
+<script src="./scripts/cardpool.js"></script>
 <script>ready(evt => { CardPool.init(); });</script>
