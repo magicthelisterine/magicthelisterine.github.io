@@ -17,7 +17,22 @@ const CardPool = {
                 this.cards = result.rows;
                 this.container = create('article');
                 this.container.replaceChildren(this.renderCards());
-                this.main.replaceChildren(this.container);
+
+                const toolbar = create('div', 'card-toolbar');
+                const cell1 = toolbar.create('div', 'card-toolbar__column');
+                
+                const cell_sort = cell1.create('select');
+                cell_sort.create('option', '', '--- Trier par ---');
+
+                const cell_type = cell1.create('select');
+                cell_type.create('option', '', '--- Type ---')
+
+
+
+
+                toolbar.create('div', 'card-toolbar__column', 'asdf');
+
+                this.main.replaceChildren(toolbar, this.container);
             } else {
                 MessageModal.alert(result.errmsg, () => {
                     document.location.href = root;
