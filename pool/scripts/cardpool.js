@@ -72,7 +72,7 @@ const CardPool = {
             if (info.image.webp_medium) thumb_medium = thumbnail_path + info.image.webp_medium;
             if (info.image.webp_large) thumb_large = thumbnail_path + info.image.webp_large;
         }
-        if(thumb_medium) (new Image).src = thumb_medium;
+        if(thumb_small) (new Image).src = thumb_small;
 
         let power_toughness = null;
         if (["Creature", "Artifact Creature"].includes(info.type)) power_toughness = info.power + '/' + info.toughness;
@@ -183,11 +183,15 @@ class CardModal extends Modal {
 
     show(computed) {
         // this.clb = clb;
+        // if(thumb_small) (new Image).src = thumb_small;
 
         const container = create('div', 'cardinfo');
         const thumb = container.create('div', 'cardinfo__thumb');
 
-        if (computed.thumb_medium) thumb.style.backgroundImage = 'url(' + computed.thumb_medium + ')';
+        if (computed.thumb_medium) {
+            (new Image).src = computed.thumb_medium;
+            thumb.style.backgroundImage = 'url(' + computed.thumb_medium + ')';
+        }
 
 
         container.create('div', 'cardinfo__name', computed.name);
