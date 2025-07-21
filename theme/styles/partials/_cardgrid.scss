@@ -342,9 +342,11 @@ body.dark {
         appearance: none;
         border-radius: 50%;
         background-image: var(--symbol-R);
+        background-size: var(--size);
+        background-position: center;
         width: var(--size);
         height: var(--size);
-        border: calc(var(--size) / 7) solid var(--color);
+        border: 0.1em solid var(--color);
         
         // box-shadow: 0 0 0 1px black;
         transition: 0.1s border linear;
