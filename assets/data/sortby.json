@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Ajouté ASC",
+        "name": "added",
+        "order": "asc",
+        "default": false
+    },
+    {
+        "title": "Ajouté DESC",
+        "name": "added",
+        "order": "desc",
+        "default": true
+    },
+    {
+        "title": "Modifié ASC",
+        "name": "modified",
+        "order": "asc",
+        "default": false
+    },
+    {
+        "title": "Modifié DESC",
+        "name": "modified",
+        "order": "desc",
+        "default": false
+    },
+    {
+        "title": "Nom ASC",
+        "name": "name",
+        "order": "asc",
+        "default": false
+    },
+    {
+        "title": "Nom DESC",
+        "name": "name",
+        "order": "desc",
+        "default": false
+    },
+    {
+        "title": "Coût ASC",
+        "name": "cost",
+        "order": "asc",
+        "default": false
+    },
+    {
+        "title": "Coût DESC",
+        "name": "cost",
+        "order": "desc",
+        "default": false
+    },
+    {
+        "title": "Force ASC",
+        "name": "power",
+        "order": "asc",
+        "default": false
+    },
+    {
+        "title": "Force DESC",
+        "name": "power",
+        "order": "desc",
+        "default": false
+    },
+    {
+        "title": "Endurance ASC",
+        "name": "toughness",
+        "order": "asc",
+        "default": false
+    },
+    {
+        "title": "Endurance DESC",
+        "name": "toughness",
+        "order": "desc",
+        "default": false
+    }
+]

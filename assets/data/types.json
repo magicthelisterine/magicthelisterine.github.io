@@ -1,9 +1,30 @@
 [
-    "Artifact",
-    "Creature",
-    "Enchantment",
-    "Instant",
-    "Land",
-    "Plainswalker",
-    "Sorcery"
+    {
+        "title": "Artifact",
+        "name": "artifact"
+    },
+    {
+        "title": "Creature",
+        "name": "creature"
+    },
+    {
+        "title": "Enchantment",
+        "name": "enchantment"
+    },
+    {
+        "title": "Instant",
+        "name": "instant"
+    },
+    {
+        "title": "Land",
+        "name": "land"
+    },
+    {
+        "title": "Plainswalker",
+        "name": "plainswalker"
+    },
+    {
+        "title": "Sorcery",
+        "name": "sorcery"
+    }
 ]

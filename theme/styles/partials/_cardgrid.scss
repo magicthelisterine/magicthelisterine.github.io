@@ -136,6 +136,18 @@ body.dark {
     .modal .cardinfo {
         background-color: var(--main-color-gradient-dark);
         // border: 1px solid var(--main-color-dark);
+        &__thumb {
+            background-color: var(--main-color-back-dark);
+        }
+    }
+
+    .card-toolbar {
+        background-color: var(--main-color-back-dark);
+
+        select {
+            background-color: var(--main-color-ultra-dark);
+            color: var(--color-white);
+        }
     }
     
     
@@ -173,6 +185,7 @@ body.dark {
     &__thumb {
         width: 100%;
         aspect-ratio: 4/3;
+        background-color: var(--main-color-back-light);
         background-image: url(../../assets/images/card-back-ntsc-medium.webp);
         background-position: center;
         background-size: cover;
@@ -244,12 +257,7 @@ body.dark {
 
 
 .card-toolbar {
-    // display: none;
-    // width: 100%;
-    // position: relative;
-    // height: 20px;
-    // background-color: red;
-    background-color: var(--main-color-back-dark);
+    background-color: var(--main-color-back-light);
 
 
     width: 100%;
@@ -275,18 +283,109 @@ body.dark {
     // }
     // padding-bottom: 20px;
 
-    display: none;
-    flex-direction: row;
-    gap: 0.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+
+
+
+    @media (min-width: 576px)  {
+        flex-direction: row;
+        gap: 0.5em;
+
+    }
+
+
 
     &__column {
         // background-color: green;
-        width: 50%;
+        width: 100%;
 
         display: flex;
         justify-content: space-evenly; /* Centre horizontalement */
         align-items: center;
 
+        @media (min-width: 576px)  {
+            width: 50%;
+    
+    
+        }
+
     }
+
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 1px solid var(--main-color);
+        background-color: var(--main-color-ultra-light);
+        background-image: var(--dropdown-arrow);
+        background-repeat: no-repeat;
+        background-position: right 0.4em center;
+        background-size: 0.8em 0.8em;
+
+        color: var(--color-black);
+        font-family: var(--font);
+        font-size: 0.8em;
+        width: 42%;
+
+        padding: 0.2em 0.2em 0.2em 0.5em;
+    }
+
+
+    input[type="checkbox"] {
+        --color: var(--symbol-R-color);
+        --size: 2em;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 50%;
+        background-image: var(--symbol-R);
+        width: var(--size);
+        height: var(--size);
+        border: calc(var(--size) / 7) solid var(--color);
+        
+        // box-shadow: 0 0 0 1px black;
+        transition: 0.1s border linear;
+        vertical-align: middle;
+        cursor: pointer;
+    
+        &:checked {
+            border: calc(var(--size) / 2) solid var(--color);
+        }
+
+        &.checkbox-white {
+            background-image: var(--symbol-W);
+            --color: var(--symbol-W-color);
+        }
+
+        &.checkbox-blue {
+            background-image: var(--symbol-U);
+            --color: var(--symbol-U-color);
+        }
+
+        &.checkbox-green {
+            background-image: var(--symbol-G);
+            --color: var(--symbol-G-color);
+        }
+
+        &.checkbox-black {
+            background-image: var(--symbol-B);
+            --color: var(--symbol-B-color);
+        }
+        
+        &.checkbox-colorless {
+            background-image: var(--symbol-C);
+            --color: var(--symbol-C-color);
+        }
+
+        &.checkbox-exclusive {
+            background-image: var(--symbol-X);
+            --color: var(--symbol-X-color);
+        }
+
+    }
+
 
 }

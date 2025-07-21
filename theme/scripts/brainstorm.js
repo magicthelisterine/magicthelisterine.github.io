@@ -8,7 +8,7 @@ const Brainstorm = {
             if(result.success) {
                 return {
                     success: true,
-                    rows: result.data.rows.reverse()
+                    rows: result.data.rows
                 }
             } else return result;
         });
@@ -36,15 +36,7 @@ const Brainstorm = {
 
 
     httpGET: async function(args = null) {
-
-        // const url = 'https://script.google.com/macros/s/' + BRAINSTORM_API + '/exec'
-        // await sleep(1000);
-        // const url = root + 'assets/data/cards.json';
-// console.log(window.location.hostname);
         const url = (window.location.hostname === 'localhost' ? root + 'assets/data/cards.json' : 'https://script.google.com/macros/s/' + BRAINSTORM_API + '/exec');
-
-
-
         return fetch(url)
         .then((response) => {
             if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);

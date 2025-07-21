@@ -6,58 +6,15 @@
  * @image    images/image.webp
  * @abstract Liste des cartes soumises
  */
+
+$datadir = $PAGE->root . 'assets/data/';
+$data = [
+    'sortby' => json_decode(file_get_contents($datadir . 'sortby.json')),
+    'types' => json_decode(file_get_contents($datadir . 'types.json')),
+];
 ?>
 
 
 <div class="loading-tri-circular main-inline"></div>
-
-
-<!-- <article>
-    <div class="card-grid">
-
-        <div class="card-grid__item">
-            <div class="card-grid__item__icon"></div>
-            <div class="card-grid__item__details">
-                <div class="card-grid__item__details__name">Joseph Facal Joseph Facal Joseph Facal Joseph Facal</div>
-                <div class="card-grid__item__details__description">
-                    <div class="card-grid__item__details__description__legend">Legendary Creature - Human Politician</div>
-                    <div class="card-grid__item__details__description__power_toughness">2/4</div>
-                    <div class="card-grid__item__details__description__cost">{U}{B}</div>
-                
-                </div>
-            </div>
-        </div>
-        
-        <div class="card-grid__item">
-            <div class="card-grid__item__icon"></div>
-            <div class="card-grid__item__details">
-                <div class="card-grid__item__details__name">Joseph Facal Joseph Facal Joseph Facal Joseph Facal</div>
-                <div class="card-grid__item__details__description">
-                    <div class="card-grid__item__details__description__legend">Legendary Creature - Human Politician</div>
-                    <div class="card-grid__item__details__description__power_toughness">2/4</div>
-                    <div class="card-grid__item__details__description__cost">{U}{B}</div>
-                
-                </div>
-            </div>
-        </div>
-
-        <div class="card-grid__item">
-            <div class="card-grid__item__icon"></div>
-            <div class="card-grid__item__details">
-                <div class="card-grid__item__details__name">Joseph Facal Joseph Facal Joseph Facal Joseph Facal</div>
-                <div class="card-grid__item__details__description">
-                    <div class="card-grid__item__details__description__legend">Legendary Creature - Human Politician</div>
-                    <div class="card-grid__item__details__description__power_toughness">2/4</div>
-                    <div class="card-grid__item__details__description__cost">{U}{B}</div>
-                
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-</article> -->
-
-
 <script src="./scripts/cardpool.js"></script>
-<script>ready(evt => { CardPool.init(); });</script>
+<script>ready(evt => { CardPool.init(<?php echo json_encode($data, JSON_NUMERIC_CHECK); ?>); });</script>

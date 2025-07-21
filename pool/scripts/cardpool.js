@@ -2,51 +2,217 @@ const thumbnail_path = root + 'assets/images/cartes/thumbnails/';
 
 
 const CardPool = {
-
+    data: null,
     main: null,
     modal: null,
+    toolbar: null,
     cards: [],
+    filters: {
+        sortby: 'added_desc',
+        type: '',
+        exclusive: false,
+        colorless: false,
+        blue: false,
+        green: false,
+        red: false,
+        black: false,
+        white: false
+    },
 
 
-    init: async function () {
+    init: async function (data) {
+        this.data = data;
         this.modal = new CardModal;
         this.main = query('main');
 
-        Brainstorm.getCards().then(result => {
-            if (result.success) {
-                this.cards = result.rows;
-                this.container = create('article');
-                this.container.replaceChildren(this.renderCards());
-
-                const toolbar = create('div', 'card-toolbar');
-                const cell1 = toolbar.create('div', 'card-toolbar__column');
-                
-                const cell_sort = cell1.create('select');
-                cell_sort.create('option', '', '--- Trier par ---');
-
-                const cell_type = cell1.create('select');
-                cell_type.create('option', '', '--- Type ---')
+        this.getCards().then(cards => {
+            this.cards = cards;
 
 
+            this.setFilters();
 
+            this.container = create('article');
+            this.toolbar = this.renderToolbar();
 
-                toolbar.create('div', 'card-toolbar__column', 'asdf');
-
-                this.main.replaceChildren(toolbar, this.container);
-            } else {
-                MessageModal.alert(result.errmsg, () => {
-                    document.location.href = root;
-                });
-            }
+            this.container.append(this.renderCards(this.cards));
+            this.main.replaceChildren(this.toolbar, this.container);
+        }).catch((err) => {
+            MessageModal.alert(err, () => {
+                document.location.href = root;
+            });
         });
     },
 
 
-    renderCards: function () {
+    getCards: async function() {
+        try {
+            const result = await Brainstorm.getCards();
+            if (result.success) {
+                result.rows.forEach(info => {
+                    let legend = info.type;
+                    if (info.supertype) legend = info.supertype + ' ' + legend;
+                    if (info.subtype) legend = legend + ' - ' + info.subtype;
+            
+                    let desctext = this.renderTextSymbols(info.description);
+                    if(info.flavor) desctext += `<hr><i>${info.flavor}</i>`;
+            
+                    let thumb_small = null;
+                    let thumb_medium = null;
+                    let thumb_large = null;
+                    if (info.image) {
+                        if (info.image.webp_small) thumb_small = thumbnail_path + info.image.webp_small;
+                        if (info.image.webp_medium) thumb_medium = thumbnail_path + info.image.webp_medium;
+                        if (info.image.webp_large) thumb_large = thumbnail_path + info.image.webp_large;
+                    }
+            
+                    let power_toughness = null;
+                    if (["Creature", "Artifact Creature"].includes(info.type)) power_toughness = info.power + '/' + info.toughness;
+
+                    // compute cost
+                    let costrender = this.trimBraces(info.cost);
+                    let realcost = 0;
+                    let colors = {
+                        blue: false,
+                        red: false,
+                        green: false,
+                        white: false,
+                        black: false,
+                        colorless: false
+                    };
+
+                    const matches = [...costrender.matchAll(/\{(.*?)\}/g)].map(m => m[1]);
+                    matches.forEach(v => {
+                        v = v.toUpperCase();
+                        realcost += isNaN(v) ? 1 : parseInt(v);
+                        if(!isNaN(v)) colors.colorless = true;
+                        else {
+                            if(v.includes('R')) colors.red = true;
+                            if(v.includes('G')) colors.green = true;
+                            if(v.includes('U')) colors.blue = true;
+                            if(v.includes('W')) colors.white = true;
+                            if(v.includes('B')) colors.black = true;
+                        }
+                    });
+
+                    info.computed = {
+                        name: info.name,
+                        legend: legend,
+                        thumb_small: thumb_small,
+                        thumb_medium: thumb_medium,
+                        thumb_large: thumb_large,
+                        cost: costrender,
+                        cost_real: realcost,
+                        cost_render: this.renderSymbols(costrender),
+                        power_toughness: power_toughness,
+                        description: desctext,
+                        colors: colors,
+                    };
+                });
+
+                return result.rows;
+            } else {
+                throw result.errmsg;
+            }
+        } catch (err) {
+            return Promise.reject(err);
+        }
+    },
+
+    setFilters: function(filters = {}) {
+        this.filters = { ...this.filters, ...filters };
+
+        const [name, order] = this.filters.sortby.split('_');
+        switch(name) {
+            case 'added': 
+                this.cards.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+                break;
+            case 'modified':
+                this.cards.sort((a, b) => new Date(a.lastModifiedAt) - new Date(b.lastModifiedAt));
+                break;
+            case 'name':
+                this.cards.sort((a, b) => a.name.localeCompare(b.name));
+                break;
+            case 'power':
+                this.cards.sort((a, b) => { if (a.power === b.power) { return a.name.localeCompare(b.name); } return a.power - b.power; });
+                break;
+            case 'toughness':
+                this.cards.sort((a, b) => { if (a.toughness === b.toughness) { return a.name.localeCompare(b.name); } return a.toughness - b.toughness; });
+                break;
+        }
+        if(order == 'desc') this.cards.reverse();
+
+        this.cards.forEach(card => card.display = this.isCardDisplay(card));
+
+    },
+
+
+    isCardDisplay: function(info) {
+        if(this.filters.type && this.filters.type != info.type.toLowerCase()) return false;
+
+        return true;
+    },
+
+
+
+    renderToolbar: function() {
+        const toolbar = create('div', 'card-toolbar');
+        const cell1 = toolbar.create('div', 'card-toolbar__column');
+        
+        const cell_sort = cell1.create('select');
+        // cell_sort.create('option', '', '--- Trier par ---').value = '';
+        this.data.sortby.forEach((v, i) => {
+            const val = v.name + '_' + v.order;
+            cell_sort.create('option', '', v.title).value = val;
+            if(this.filters.sortby == val) cell_sort.selectedIndex = i;
+        });
+        cell_sort.addEventListener('change', e => {
+            this.sortBy(cell_sort.value);
+        });
+        
+        const cell_type = cell1.create('select');
+        cell_type.create('option', '', 'Tous les types').value = '';
+        this.data.types.forEach(v => { cell_type.create('option', '', v.title).value = v.name; });
+        cell_type.addEventListener('change', e => {
+            this.sortType(cell_type.value)
+
+        });
+
+        const cell2 = toolbar.create('div', 'card-toolbar__column');
+
+        const check_white = cell2.create('input', 'checkbox-white');
+        check_white.type = 'checkbox';
+
+        const check_red = cell2.create('input', 'checkbox-red');
+        check_red.type = 'checkbox';
+
+        const check_blue = cell2.create('input', 'checkbox-blue');
+        check_blue.type = 'checkbox';
+
+        const check_green = cell2.create('input', 'checkbox-green');
+        check_green.type = 'checkbox';
+
+        const check_black = cell2.create('input', 'checkbox-black');
+        check_black.type = 'checkbox';
+
+        const check_colorless = cell2.create('input', 'checkbox-colorless');
+        check_colorless.type = 'checkbox';
+
+        const check_exclusive = cell2.create('input', 'checkbox-exclusive');
+        check_exclusive.type = 'checkbox';
+
+        return toolbar;
+    },
+
+
+
+
+
+
+    renderCards: function (cards) {
 
         const grid = create('div', 'card-grid');
-        this.cards.forEach(info => {
-            grid.append(this.renderCard(info));
+        cards.forEach(info => {
+            if(info.display)  grid.append(this.renderCard(info));
         });
         return grid;
 
@@ -55,48 +221,6 @@ const CardPool = {
 
 
     renderCard: function (info) {
-
-        let legend = info.type;
-        if (info.supertype) legend = info.supertype + ' ' + legend;
-        if (info.subtype) legend = legend + ' - ' + info.subtype;
-
-
-        let desctext = this.renderTextSymbols(info.description);
-        if(info.flavor) desctext += `<hr><i>${info.flavor}</i>`;
-
-        let thumb_small = null;
-        let thumb_medium = null;
-        let thumb_large = null;
-        if (info.image) {
-            if (info.image.webp_small) thumb_small = thumbnail_path + info.image.webp_small;
-            if (info.image.webp_medium) thumb_medium = thumbnail_path + info.image.webp_medium;
-            if (info.image.webp_large) thumb_large = thumbnail_path + info.image.webp_large;
-        }
-        if(thumb_small) (new Image).src = thumb_small;
-
-        let power_toughness = null;
-        if (["Creature", "Artifact Creature"].includes(info.type)) power_toughness = info.power + '/' + info.toughness;
-
-
-
-        info.computed = {
-            name: info.name,
-            legend: legend,
-            thumb_small: thumb_small,
-            thumb_medium: thumb_medium,
-            thumb_large: thumb_large,
-            cost: this.trimBraces(info.cost),
-            cost_render: this.renderSymbols(this.trimBraces(info.cost)),
-            power_toughness: power_toughness,
-            description: desctext,
-
-            // thumb_small: 
-
-        };
-
-
-
-
         const card = create('div', 'card-grid__item');
         const icon = card.create('div', 'card-grid__item__icon');
         if (info.computed.thumb_small) icon.style.backgroundImage = 'url(' + info.computed.thumb_small + ')';
@@ -109,17 +233,30 @@ const CardPool = {
         description.create('div', 'card-grid__item__details__description__power_toughness', info.computed.power_toughness);
         description.create('div', 'card-grid__item__details__description__cost', info.computed.cost_render)
 
+        card.dataset.uuid = info.uuid;
         card.addEventListener('click', evt => {
-            // console.log(card.dataset.key);
-            // console.log(info.computed);
-            // console.log(info);
             this.modal.show(info.computed);
-
-            // console.log(this.trimBraces('{u}4{dasd}3asdf'));
-
         });
         return card;
     },
+
+    updateCardList: function() {
+        this.container.replaceChildren(this.renderCards(this.cards));
+    },
+
+
+    sortBy: function(ord) {
+        this.setFilters({ sortby: ord });
+        this.updateCardList();
+    },
+
+    sortType: function(type) {
+        this.setFilters({ type: type });
+        this.updateCardList();
+    },
+
+
+
 
 
 
@@ -136,8 +273,6 @@ const CardPool = {
             .replace(/\{i\}(.*?)\{\/i\}/gi, '<em>$1</em>')
             .replace(/\{(?!\/?i\})(.*?)\}/gi, (match, p1) => { return `<div class="symbol-1em icon-${p1.toUpperCase()}"></div>`; });
     },
-
-
 
     trimBraces: function (str) {
         return (String(str).match(/{[^}]*}/g) || []).join('');
@@ -159,13 +294,7 @@ const CardPool = {
 
 class CardModal extends Modal {
 
-    // form = null;
-    // clb = null;
-
     constructor() {
-        // let form = create('form', 'email-modal');
-        // form.innerHTML = '';
-
         super();
 
         this.cont.addEventListener('mousedown', evt => {
@@ -177,22 +306,21 @@ class CardModal extends Modal {
                 this.hide();
             }
         });
-
     }
 
-
     show(computed) {
-        // this.clb = clb;
-        // if(thumb_small) (new Image).src = thumb_small;
-
         const container = create('div', 'cardinfo');
         const thumb = container.create('div', 'cardinfo__thumb');
 
         if (computed.thumb_medium) {
-            (new Image).src = computed.thumb_medium;
-            thumb.style.backgroundImage = 'url(' + computed.thumb_medium + ')';
+            
+            const img = new Image();
+            img.addEventListener('load', e => { thumb.style.backgroundImage = 'url(' + computed.thumb_medium + ')'; });
+            img.src = computed.thumb_medium;
+            
+            // (new Image).src = computed.thumb_medium;
+            
         }
-
 
         container.create('div', 'cardinfo__name', computed.name);
         container.create('div', 'cardinfo__legend', computed.legend);
