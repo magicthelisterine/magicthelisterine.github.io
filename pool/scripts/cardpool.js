@@ -1,5 +1,12 @@
 const thumbnail_path = root + 'assets/images/cartes/thumbnails/';
 
+const WHITE = 1;
+const RED   = 2;
+const BLUE  = 4;
+const GREEN = 8;
+const BLACK = 16;
+
+
 
 const CardPool = {
     data: null,
@@ -94,6 +101,13 @@ const CardPool = {
                         }
                     });
 
+                    let colorsum = 0;
+                    if(colors.red) colorsum += RED;
+                    if(colors.blue) colorsum += BLUE;
+                    if(colors.green) colorsum += GREEN;
+                    if(colors.white) colorsum += WHITE;
+                    if(colors.black) colorsum += BLACK;
+
                     info.computed = {
                         name: info.name,
                         legend: legend,
@@ -105,6 +119,7 @@ const CardPool = {
                         cost_render: this.renderSymbols(costrender),
                         power_toughness: power_toughness,
                         description: desctext,
+                        colorsum: colorsum,
                         colors: colors,
                     };
                 });
@@ -141,13 +156,42 @@ const CardPool = {
         }
         if(order == 'desc') this.cards.reverse();
 
-        this.cards.forEach(card => card.display = this.isCardDisplay(card));
 
+        if(this.filters.exclusive) {
+            this.filters.exclusive_sum = 0;
+            if(this.filters.red) this.filters.exclusive_sum += RED;
+            if(this.filters.green) this.filters.exclusive_sum += GREEN;
+            if(this.filters.blue) this.filters.exclusive_sum += BLUE;
+            if(this.filters.white) this.filters.exclusive_sum += WHITE;
+            if(this.filters.black) this.filters.exclusive_sum += BLACK;
+        } else {
+            this.filters.inclusive_sum = 0;
+            if(this.filters.red) this.filters.inclusive_sum |= RED;
+            if(this.filters.green) this.filters.inclusive_sum |= GREEN;
+            if(this.filters.blue) this.filters.inclusive_sum |= BLUE;
+            if(this.filters.white) this.filters.inclusive_sum |= WHITE;
+            if(this.filters.black) this.filters.inclusive_sum |= BLACK;
+        }
+        this.cards.forEach(card => card.display = this.isCardDisplay(card));
     },
 
 
     isCardDisplay: function(info) {
         if(this.filters.type && this.filters.type != info.type.toLowerCase()) return false;
+
+        // if(this.filters.colorless && info.computed.colorsum) return false;
+        if(this.filters.colorless) return info.computed.colorsum ? false : true;
+
+
+
+        if(this.filters.exclusive) {
+            if(this.filters.exclusive_sum && (info.computed.colorsum != this.filters.exclusive_sum)) return false;
+        } else {
+            if(this.filters.inclusive_sum && !(info.computed.colorsum & this.filters.inclusive_sum)) return false;
+        }
+
+
+        
 
         return true;
     },
@@ -179,44 +223,27 @@ const CardPool = {
 
         const cell2 = toolbar.create('div', 'card-toolbar__column');
 
-        const check_white = cell2.create('input', 'checkbox-white');
-        check_white.type = 'checkbox';
+        ["white", "red", "blue", "green", "black", "colorless", "exclusive"].forEach(v => {
+            const check = cell2.create('input', 'checkbox-' + v);
+            check.type = 'checkbox';
+            check.addEventListener('change', e => {
+                this.setFilters({[v]: check.checked});
+                this.updateCardList();
+            });
 
-        const check_red = cell2.create('input', 'checkbox-red');
-        check_red.type = 'checkbox';
+        });
 
-        const check_blue = cell2.create('input', 'checkbox-blue');
-        check_blue.type = 'checkbox';
-
-        const check_green = cell2.create('input', 'checkbox-green');
-        check_green.type = 'checkbox';
-
-        const check_black = cell2.create('input', 'checkbox-black');
-        check_black.type = 'checkbox';
-
-        const check_colorless = cell2.create('input', 'checkbox-colorless');
-        check_colorless.type = 'checkbox';
-
-        const check_exclusive = cell2.create('input', 'checkbox-exclusive');
-        check_exclusive.type = 'checkbox';
 
         return toolbar;
     },
 
 
-
-
-
-
     renderCards: function (cards) {
-
         const grid = create('div', 'card-grid');
         cards.forEach(info => {
-            if(info.display)  grid.append(this.renderCard(info));
+            if(info.display) grid.append(this.renderCard(info));
         });
         return grid;
-
-
     },
 
 
@@ -313,13 +340,10 @@ class CardModal extends Modal {
         const thumb = container.create('div', 'cardinfo__thumb');
 
         if (computed.thumb_medium) {
-            
-            const img = new Image();
-            img.addEventListener('load', e => { thumb.style.backgroundImage = 'url(' + computed.thumb_medium + ')'; });
-            img.src = computed.thumb_medium;
-            
-            // (new Image).src = computed.thumb_medium;
-            
+            // const img = new Image();
+            // img.addEventListener('load', e => { thumb.style.backgroundImage = 'url(' + computed.thumb_medium + ')'; });
+            // img.src = computed.thumb_medium;
+            thumb.style.backgroundImage = 'url(' + computed.thumb_medium + ')';
         }
 
         container.create('div', 'cardinfo__name', computed.name);
