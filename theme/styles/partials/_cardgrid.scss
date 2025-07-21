@@ -362,6 +362,11 @@ body.dark {
             border: calc(var(--size) / 2) solid var(--color);
         }
 
+        &:disabled {
+            border: 0.1em solid var(--color);
+            opacity: 0.4;
+        }
+
         &.checkbox-white {
             background-image: var(--symbol-W);
             --color: var(--symbol-W-color);

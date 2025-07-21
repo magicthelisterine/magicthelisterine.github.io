@@ -147,6 +147,9 @@ const CardPool = {
             case 'name':
                 this.cards.sort((a, b) => a.name.localeCompare(b.name));
                 break;
+            case 'cost':
+                this.cards.sort((a, b) => { if (a.computed.cost_real === b.computed.cost_real) { return a.name.localeCompare(b.name); } return a.computed.cost_real - b.computed.cost_real; });
+                break;
             case 'power':
                 this.cards.sort((a, b) => { if (a.power === b.power) { return a.name.localeCompare(b.name); } return a.power - b.power; });
                 break;
@@ -178,21 +181,12 @@ const CardPool = {
 
     isCardDisplay: function(info) {
         if(this.filters.type && this.filters.type != info.type.toLowerCase()) return false;
-
-        // if(this.filters.colorless && info.computed.colorsum) return false;
         if(this.filters.colorless) return info.computed.colorsum ? false : true;
-
-
-
         if(this.filters.exclusive) {
             if(this.filters.exclusive_sum && (info.computed.colorsum != this.filters.exclusive_sum)) return false;
         } else {
             if(this.filters.inclusive_sum && !(info.computed.colorsum & this.filters.inclusive_sum)) return false;
         }
-
-
-        
-
         return true;
     },
 
@@ -227,6 +221,11 @@ const CardPool = {
             const check = cell2.create('input', 'checkbox-' + v);
             check.type = 'checkbox';
             check.addEventListener('change', e => {
+                if(v == 'colorless') {
+                    cell2.querySelectorAll('input:not(.checkbox-colorless)').forEach(elm => {
+                        elm.disabled = check.checked;
+                    });
+                }
                 this.setFilters({[v]: check.checked});
                 this.updateCardList();
             });
