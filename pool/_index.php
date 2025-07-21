@@ -16,5 +16,5 @@ $data = [
 
 
 <div class="loading-tri-circular main-inline"></div>
-<script src="./scripts/cardpool.js"></script>
+<script src="./scripts/cardpool.min.js"></script>
 <script>ready(evt => { CardPool.init(<?php echo json_encode($data, JSON_NUMERIC_CHECK); ?>); });</script>

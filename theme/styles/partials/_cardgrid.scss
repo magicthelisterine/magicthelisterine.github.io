@@ -353,6 +353,11 @@ body.dark {
         vertical-align: middle;
         cursor: pointer;
     
+        @media (max-width: 576px)  {
+            --size: 3em;
+        }
+
+
         &:checked {
             border: calc(var(--size) / 2) solid var(--color);
         }
