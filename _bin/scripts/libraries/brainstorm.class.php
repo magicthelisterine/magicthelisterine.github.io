@@ -24,6 +24,15 @@ class Brainstorm {
     }
 
 
+    public static function addCard($values) {
+        print_r(self::curlPost([
+            'action' => 'add',
+            'values' => $values,
+        ]));
+    }
+
+
+
     public static function update($uuid, $data) {
 
     }
@@ -55,7 +64,7 @@ class Brainstorm {
         curl_setopt_array($chnd, [
             CURLOPT_POST => true,
             CURLOPT_HTTPHEADER => ['Content-Type: application/x-www-form-urlencoded'],
-            CURLOPT_POSTFIELDS => http_build_query(['data' => json_encode($values)])
+            CURLOPT_POSTFIELDS => http_build_query(['data' => json_encode($values)], '', '&', PHP_QUERY_RFC3986)
         ]);
         $result = curl_exec($chnd);
         $info = curl_getinfo($chnd);

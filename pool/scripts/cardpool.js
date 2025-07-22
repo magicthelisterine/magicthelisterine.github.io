@@ -34,8 +34,6 @@ const CardPool = {
 
         this.getCards().then(cards => {
             this.cards = cards;
-
-
             this.setFilters();
 
             this.container = create('article');
@@ -75,38 +73,25 @@ const CardPool = {
                     let power_toughness = null;
                     if (["Creature", "Artifact Creature"].includes(info.type)) power_toughness = info.power + '/' + info.toughness;
 
-                    // compute cost
                     let costrender = this.trimBraces(info.cost);
                     let realcost = 0;
-                    let colors = {
-                        blue: false,
-                        red: false,
-                        green: false,
-                        white: false,
-                        black: false,
-                        colorless: false
-                    };
 
+                    let colors = { blue: 0, red: 0, green: 0, white: 0, black: 0, colorless: 0 };
                     const matches = [...costrender.matchAll(/\{(.*?)\}/g)].map(m => m[1]);
                     matches.forEach(v => {
                         v = v.toUpperCase();
                         realcost += isNaN(v) ? 1 : parseInt(v);
                         if(!isNaN(v)) colors.colorless = true;
                         else {
-                            if(v.includes('R')) colors.red = true;
-                            if(v.includes('G')) colors.green = true;
-                            if(v.includes('U')) colors.blue = true;
-                            if(v.includes('W')) colors.white = true;
-                            if(v.includes('B')) colors.black = true;
+                            if(v.includes('R')) colors.red = RED;
+                            if(v.includes('G')) colors.green = GREEN;
+                            if(v.includes('U')) colors.blue = BLUE;
+                            if(v.includes('W')) colors.white = WHITE;
+                            if(v.includes('B')) colors.black = BLACK;
                         }
                     });
 
-                    let colorsum = 0;
-                    if(colors.red) colorsum += RED;
-                    if(colors.blue) colorsum += BLUE;
-                    if(colors.green) colorsum += GREEN;
-                    if(colors.white) colorsum += WHITE;
-                    if(colors.black) colorsum += BLACK;
+                    const colorsum = Object.entries(colors).reduce((t, [k,v]) => k === 'colorless' ? t : t + v, 0);
 
                     info.computed = {
                         name: info.name,
@@ -159,7 +144,6 @@ const CardPool = {
         }
         if(order == 'desc') this.cards.reverse();
 
-
         if(this.filters.exclusive) {
             this.filters.exclusive_sum = 0;
             if(this.filters.red) this.filters.exclusive_sum += RED;
@@ -197,7 +181,6 @@ const CardPool = {
         const cell1 = toolbar.create('div', 'card-toolbar__column');
         
         const cell_sort = cell1.create('select');
-        // cell_sort.create('option', '', '--- Trier par ---').value = '';
         this.data.sortby.forEach((v, i) => {
             const val = v.name + '_' + v.order;
             cell_sort.create('option', '', v.title).value = val;
@@ -322,11 +305,9 @@ class CardModal extends Modal {
 
     constructor() {
         super();
-
         this.cont.addEventListener('mousedown', evt => {
             this.hide();
         });
-
         document.addEventListener('keydown', evt => {
             if (this.opened && (evt.key === 'Escape' && !(evt.ctrlKey || evt.altKey || evt.shiftKey))) {
                 this.hide();
