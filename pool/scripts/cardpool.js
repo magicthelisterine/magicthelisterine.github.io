@@ -232,7 +232,7 @@ const CardPool = {
         return card;
     },
 
-    updateCardList: function() {
+    updateCardList: async function() {
         this.container.replaceChildren(this.renderCards(this.cards));
     },
 
