@@ -255,7 +255,7 @@ const CardPool = {
     renderSymbols: function (value) {
         let htmlRender = '';
         const matches = [...String(value).matchAll(/\{(.*?)\}/g)].map(m => m[1]);
-        matches.forEach(v => { htmlRender += `<div class="symbol-1em icon-${v}"></div>`; })
+        matches.forEach(v => { htmlRender += `<div class="symbol-1em icon-${v.toUpperCase()}"></div>`; })
         return htmlRender;
     },
 
