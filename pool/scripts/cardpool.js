@@ -17,7 +17,6 @@ const CardPool = {
     filters: {
         sortby: 'added_desc',
         type: '',
-        exclusive: false,
         colorless: false,
         blue: false,
         green: false,
@@ -91,7 +90,7 @@ const CardPool = {
                         }
                     });
 
-                    const colorsum = Object.entries(colors).reduce((t, [k,v]) => k === 'colorless' ? t : t + v, 0);
+                    const colorsum = Object.entries(colors).reduce((t, [k,v]) => k === 'colorless' ? t : t | v, 0);
 
                     info.computed = {
                         name: info.name,
@@ -144,21 +143,9 @@ const CardPool = {
         }
         if(order == 'desc') this.cards.reverse();
 
-        if(this.filters.exclusive) {
-            this.filters.exclusive_sum = 0;
-            if(this.filters.red) this.filters.exclusive_sum += RED;
-            if(this.filters.green) this.filters.exclusive_sum += GREEN;
-            if(this.filters.blue) this.filters.exclusive_sum += BLUE;
-            if(this.filters.white) this.filters.exclusive_sum += WHITE;
-            if(this.filters.black) this.filters.exclusive_sum += BLACK;
-        } else {
-            this.filters.inclusive_sum = 0;
-            if(this.filters.red) this.filters.inclusive_sum |= RED;
-            if(this.filters.green) this.filters.inclusive_sum |= GREEN;
-            if(this.filters.blue) this.filters.inclusive_sum |= BLUE;
-            if(this.filters.white) this.filters.inclusive_sum |= WHITE;
-            if(this.filters.black) this.filters.inclusive_sum |= BLACK;
-        }
+        this.filters.inclusive_sum = Object.entries({ red: RED, green: GREEN, blue: BLUE, white: WHITE, black: BLACK })
+            .reduce((sum, [color, bit]) => this.filters[color] ? sum | bit : sum, 0);
+
         this.cards.forEach(card => card.display = this.isCardDisplay(card));
     },
 
@@ -166,14 +153,10 @@ const CardPool = {
     isCardDisplay: function(info) {
         if(this.filters.type && this.filters.type != info.type.toLowerCase()) return false;
         if(this.filters.colorless) return info.computed.colorsum ? false : true;
-        if(this.filters.exclusive) {
-            if(this.filters.exclusive_sum && (info.computed.colorsum != this.filters.exclusive_sum)) return false;
-        } else {
-            if(this.filters.inclusive_sum && !(info.computed.colorsum & this.filters.inclusive_sum)) return false;
-        }
-        return true;
+        if(!this.filters.inclusive_sum) return true;
+        if(!info.computed.colorsum  && this.filters.inclusive_sum) return false;
+        return (info.computed.colorsum & this.filters.inclusive_sum) === info.computed.colorsum;
     },
-
 
 
     renderToolbar: function() {
@@ -200,7 +183,7 @@ const CardPool = {
 
         const cell2 = toolbar.create('div', 'card-toolbar__column');
 
-        ["white", "red", "blue", "green", "black", "colorless", "exclusive"].forEach(v => {
+        ["white", "red", "blue", "green", "black", "colorless"].forEach(v => {
             const check = cell2.create('input', 'checkbox-' + v);
             check.type = 'checkbox';
             check.addEventListener('change', e => {

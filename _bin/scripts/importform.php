@@ -1,5 +1,5 @@
 <?php
-
+die();
 const CACHE = false;
 
 define('ROOT', realpath(__DIR__ . '/../../').'/');
