@@ -33,13 +33,10 @@ const CardPool = {
 
         this.getCards().then(cards => {
             this.cards = cards;
-            this.setFilters();
-
             this.container = create('article');
             this.toolbar = this.renderToolbar();
-
-            this.container.append(this.renderCards(this.cards));
             this.main.replaceChildren(this.toolbar, this.container);
+            this.updateCardList();
         }).catch((err) => {
             MessageModal.alert(err, () => {
                 document.location.href = root;
@@ -56,9 +53,7 @@ const CardPool = {
                     info.type = info.type.trim();
                     info.supertype = info.supertype.trim();
                     info.subtype = info.subtype.trim();
-                    
-                    
-                    
+                                        
                     let legend = info.type;
                     if (info.supertype) legend = info.supertype + ' ' + legend;
                     if (info.subtype) legend = legend + ' - ' + info.subtype;
@@ -66,7 +61,7 @@ const CardPool = {
                     let desctext = this.renderTextSymbols(info.description);
                     if(info.flavor) desctext += `<hr><i>${info.flavor}</i>`;
 
-                    let power_toughness = info.type.includes("Creature") ? `${info.power}/${info.toughness}` : null;
+                    let power_toughness = info.type.includes("Creature") ? `${info.power}/${info.toughness}` : ``;
                     let costrender = this.trimBraces(info.cost);
                     let realcost = 0;
 
@@ -87,7 +82,6 @@ const CardPool = {
                             colors.colorless = true;
                         }
                     });
-
 
                     const colorsum = Object.entries(colors).reduce((t, [k,v]) => k === 'colorless' ? t : t | v, 0);
 
@@ -121,24 +115,12 @@ const CardPool = {
 
         const [name, order] = this.filters.sortby.split('_');
         switch(name) {
-            case 'added':
-                this.cards.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
-                break;
-            case 'modified':
-                this.cards.sort((a, b) => new Date(a.lastModifiedAt) - new Date(b.lastModifiedAt));
-                break;
-            case 'name':
-                this.cards.sort((a, b) => a.name.localeCompare(b.name));
-                break;
-            case 'cost':
-                this.cards.sort((a, b) => { if (a.computed.cost_real === b.computed.cost_real) { return a.name.localeCompare(b.name); } return a.computed.cost_real - b.computed.cost_real; });
-                break;
-            case 'power':
-                this.cards.sort((a, b) => { if (a.power === b.power) { return a.name.localeCompare(b.name); } return a.power - b.power; });
-                break;
-            case 'toughness':
-                this.cards.sort((a, b) => { if (a.toughness === b.toughness) { return a.name.localeCompare(b.name); } return a.toughness - b.toughness; });
-                break;
+            case 'added': this.cards.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt)); break;
+            case 'modified': this.cards.sort((a, b) => new Date(a.lastModifiedAt) - new Date(b.lastModifiedAt)); break;
+            case 'name': this.cards.sort((a, b) => a.name.localeCompare(b.name)); break;
+            case 'cost': this.cards.sort((a, b) => { if (a.computed.cost_real === b.computed.cost_real) { return a.name.localeCompare(b.name); } return a.computed.cost_real - b.computed.cost_real; }); break;
+            case 'power': this.cards.sort((a, b) => { if (a.power === b.power) { return a.name.localeCompare(b.name); } return a.power - b.power; }); break;
+            case 'toughness': this.cards.sort((a, b) => { if (a.toughness === b.toughness) { return a.name.localeCompare(b.name); } return a.toughness - b.toughness; }); break;
         }
         if(order == 'desc') this.cards.reverse();
 
@@ -169,14 +151,14 @@ const CardPool = {
             if(this.filters.sortby == val) cell_sort.selectedIndex = i;
         });
         cell_sort.addEventListener('change', e => {
-            this.sortBy(cell_sort.value);
+            this.updateCardList({ sortby: cell_sort.value });
         });
 
         const cell_type = cell1.create('select');
         cell_type.create('option', '', 'Tous les types').value = '';
         this.data.types.forEach(v => { cell_type.create('option', '', v.title).value = v.name; });
         cell_type.addEventListener('change', e => {
-            this.sortType(cell_type.value)
+            this.updateCardList({ type: cell_type.value });
 
         });
 
@@ -191,8 +173,7 @@ const CardPool = {
                         elm.disabled = check.checked;
                     });
                 }
-                this.setFilters({[v]: check.checked});
-                this.updateCardList();
+                this.updateCardList({[v]: check.checked});
             });
 
         });
@@ -224,30 +205,14 @@ const CardPool = {
         description.create('div', 'card-grid__item__details__description__power_toughness', info.computed.power_toughness);
         description.create('div', 'card-grid__item__details__description__cost', info.computed.cost_render)
 
-        card.dataset.uuid = info.uuid;
-        card.addEventListener('click', evt => {
-            this.modal.show(info.computed);
-        });
+        card.addEventListener('click', evt => { this.modal.show(info.computed); });
         return card;
     },
 
-    updateCardList: async function() {
+    updateCardList: async function(filters = {}) {
+        this.setFilters(filters);
         this.container.replaceChildren(this.renderCards(this.cards));
     },
-
-
-    sortBy: function(ord) {
-        this.setFilters({ sortby: ord });
-        this.updateCardList();
-    },
-
-    sortType: function(type) {
-        this.setFilters({ type: type });
-        this.updateCardList();
-    },
-
-
-
 
 
 
@@ -288,9 +253,7 @@ class CardModal extends Modal {
 
     constructor() {
         super();
-        this.cont.addEventListener('mousedown', evt => {
-            this.hide();
-        });
+        this.cont.addEventListener('mousedown', evt => this.hide());
         document.addEventListener('keydown', evt => {
             if (this.opened && (evt.key === 'Escape' && !(evt.ctrlKey || evt.altKey || evt.shiftKey))) {
                 this.hide();
@@ -302,24 +265,14 @@ class CardModal extends Modal {
         const container = create('div', 'cardinfo');
         const thumb = container.create('div', 'cardinfo__thumb');
 
-        if (computed.thumb_medium) {
-            // const img = new Image();
-            // img.addEventListener('load', e => { thumb.style.backgroundImage = 'url(' + computed.thumb_medium + ')'; });
-            // img.src = computed.thumb_medium;
-            thumb.style.backgroundImage = 'url(' + computed.thumb_medium + ')';
-        }
-
+        if (computed.thumb_medium) thumb.style.backgroundImage = 'url(' + computed.thumb_medium + ')';
         container.create('div', 'cardinfo__name', computed.name);
         container.create('div', 'cardinfo__legend', computed.legend);
         container.create('div', 'cardinfo__cost', '<strong>Coût:</strong> ' + computed.cost_render);
-        container.create('div', 'cardinfo__power_toughness', '<strong>Force/Endurance:</strong> ' + (computed.power_toughness ? computed.power_toughness : ''));
+        container.create('div', 'cardinfo__power_toughness', '<strong>Force/Endurance:</strong> ' + computed.power_toughness);
         container.create('div', 'cardinfo__description', computed.description);
 
         super.show(container);
-    }
-
-    cancel() {
-        this.hide();
     }
 
 }
