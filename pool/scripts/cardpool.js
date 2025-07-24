@@ -53,51 +53,50 @@ const CardPool = {
             const result = await Brainstorm.getCards();
             if (result.success) {
                 result.rows.forEach(info => {
+                    info.type = info.type.trim();
+                    info.supertype = info.supertype.trim();
+                    info.subtype = info.subtype.trim();
+                    
+                    
+                    
                     let legend = info.type;
                     if (info.supertype) legend = info.supertype + ' ' + legend;
                     if (info.subtype) legend = legend + ' - ' + info.subtype;
-            
+
                     let desctext = this.renderTextSymbols(info.description);
                     if(info.flavor) desctext += `<hr><i>${info.flavor}</i>`;
-            
-                    let thumb_small = null;
-                    let thumb_medium = null;
-                    let thumb_large = null;
-                    if (info.image) {
-                        if (info.image.webp_small) thumb_small = thumbnail_path + info.image.webp_small;
-                        if (info.image.webp_medium) thumb_medium = thumbnail_path + info.image.webp_medium;
-                        if (info.image.webp_large) thumb_large = thumbnail_path + info.image.webp_large;
-                    }
-            
-                    let power_toughness = null;
-                    if (["Creature", "Artifact Creature"].includes(info.type)) power_toughness = info.power + '/' + info.toughness;
 
+                    let power_toughness = info.type.includes("Creature") ? `${info.power}/${info.toughness}` : null;
                     let costrender = this.trimBraces(info.cost);
                     let realcost = 0;
 
-                    let colors = { blue: 0, red: 0, green: 0, white: 0, black: 0, colorless: 0 };
-                    const matches = [...costrender.matchAll(/\{(.*?)\}/g)].map(m => m[1]);
+                    let colors = { blue: 0, red: 0, green: 0, white: 0, black: 0, colorless: false };
+                    const matches = [...costrender.matchAll(/\{(.*?)}/g)].map(m => m[1]);
+
                     matches.forEach(v => {
                         v = v.toUpperCase();
-                        realcost += isNaN(v) ? 1 : parseInt(v);
-                        if(!isNaN(v)) colors.colorless = true;
-                        else {
-                            if(v.includes('R')) colors.red = RED;
-                            if(v.includes('G')) colors.green = GREEN;
-                            if(v.includes('U')) colors.blue = BLUE;
-                            if(v.includes('W')) colors.white = WHITE;
-                            if(v.includes('B')) colors.black = BLACK;
+                        if (isNaN(v)) {
+                            realcost += 1;
+                            if (v.includes('R')) colors.red = RED;
+                            if (v.includes('G')) colors.green = GREEN;
+                            if (v.includes('U')) colors.blue = BLUE;
+                            if (v.includes('W')) colors.white = WHITE;
+                            if (v.includes('B')) colors.black = BLACK;
+                        } else {
+                            realcost += parseInt(v);
+                            colors.colorless = true;
                         }
                     });
+
 
                     const colorsum = Object.entries(colors).reduce((t, [k,v]) => k === 'colorless' ? t : t | v, 0);
 
                     info.computed = {
                         name: info.name,
                         legend: legend,
-                        thumb_small: thumb_small,
-                        thumb_medium: thumb_medium,
-                        thumb_large: thumb_large,
+                        thumb_small: info.image?.webp_small ? thumbnail_path + info.image.webp_small : null,
+                        thumb_medium: info.image?.webp_medium ? thumbnail_path + info.image.webp_medium : null,
+                        thumb_large: info.image?.webp_large ? thumbnail_path + info.image.webp_large : null,
                         cost: costrender,
                         cost_real: realcost,
                         cost_render: this.renderSymbols(costrender),
@@ -122,7 +121,7 @@ const CardPool = {
 
         const [name, order] = this.filters.sortby.split('_');
         switch(name) {
-            case 'added': 
+            case 'added':
                 this.cards.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
                 break;
             case 'modified':
@@ -162,7 +161,7 @@ const CardPool = {
     renderToolbar: function() {
         const toolbar = create('div', 'card-toolbar');
         const cell1 = toolbar.create('div', 'card-toolbar__column');
-        
+
         const cell_sort = cell1.create('select');
         this.data.sortby.forEach((v, i) => {
             const val = v.name + '_' + v.order;
@@ -172,7 +171,7 @@ const CardPool = {
         cell_sort.addEventListener('change', e => {
             this.sortBy(cell_sort.value);
         });
-        
+
         const cell_type = cell1.create('select');
         cell_type.create('option', '', 'Tous les types').value = '';
         this.data.types.forEach(v => { cell_type.create('option', '', v.title).value = v.name; });
@@ -267,8 +266,9 @@ const CardPool = {
     },
 
     trimBraces: function (str) {
-        return (String(str).match(/{[^}]*}/g) || []).join('');
-    },
+        return (String(str).match(/{[^}]*}/g) || []).join('').toUpperCase();
+    }
+
 
 
 
