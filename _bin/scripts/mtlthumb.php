@@ -17,7 +17,7 @@ require_once(__DIR__ . '/libraries/brainstorm.class.php');
 // die();
 if(!CACHE) {
     if(!$cards = Brainstorm::getCards()) err("Can't get cards from API.");
-    // file_put_contents(DATA_DIR . 'cards.json', json_encode($cards));
+    file_put_contents(DATA_DIR . 'cards.json', json_encode($cards));
     Cache::set('cards', $cards);
 } else $cards = Cache::get('cards');
 
@@ -56,34 +56,44 @@ foreach($cards as $card) {
 }
 
 
-
-
-
 function blobToJpeg($blob, $dest) {
     try {
-        $im = new Imagick;
-        $im->readImageBlob($blob);
-        $im->setImageCompression(Imagick::COMPRESSION_JPEG);
-        $im->setImageCompressionQuality(100);
-        $im->writeImage($dest);
-        $im->destroy();
+        // Créer une image à partir du blob
+        $sourceImage = imagecreatefromstring($blob);
+        if (!$sourceImage) {
+            throw new Exception('Failed to create image from blob.');
+        }
+
+        // Sauvegarder l'image en format JPEG avec une qualité maximale
+        if (!imagejpeg($sourceImage, $dest, 100)) {
+            throw new Exception('Failed to save image as JPEG.');
+        }
+
+        // Libération de la mémoire
+        imagedestroy($sourceImage);
+
         return $dest;
-    } catch(Exception $e) {
+    } catch (Exception $e) {
         return false;
     }
 }
 
 
+
+
 function blobToWebp($blob, $dest, $width, $height) {
     try {
-        $im = new Imagick;
-        $im->readImageBlob($blob);
+        // Créer une image à partir du blob
+        $sourceImage = imagecreatefromstring($blob);
+        if (!$sourceImage) {
+            throw new Exception('Failed to create image from blob.');
+        }
 
-        $originalWidth = $im->getImageWidth();
-        $originalHeight = $im->getImageHeight();
+        $originalWidth = imagesx($sourceImage);
+        $originalHeight = imagesy($sourceImage);
         $aspectRatio = $originalWidth / $originalHeight;
         $targetAspectRatio = $width / $height;
-        
+
         if ($aspectRatio > $targetAspectRatio) {
             $newHeight = $originalHeight;
             $newWidth = (int)($originalHeight * $targetAspectRatio);
@@ -91,18 +101,30 @@ function blobToWebp($blob, $dest, $width, $height) {
             $newWidth = $originalWidth;
             $newHeight = (int)($originalWidth / $targetAspectRatio);
         }
-        
+
         $cropX = (int)(($originalWidth - $newWidth) / 2);
         $cropY = (int)(($originalHeight - $newHeight) / 2);
-        
-        $im->cropImage($newWidth, $newHeight, $cropX, $cropY);
-        $im->resizeImage($width, $height, Imagick::FILTER_LANCZOS, 1);
-        $im->setImageFormat('webp');
-        $im->setOption('webp:method', '6'); 
-        $im->writeImage($dest);
-        $im->destroy();
+
+        // Créer une image de destination pour le recadrage
+        $croppedImage = imagecreatetruecolor($newWidth, $newHeight);
+        imagecopy($croppedImage, $sourceImage, 0, 0, $cropX, $cropY, $newWidth, $newHeight);
+
+        // Redimensionner l'image
+        $resizedImage = imagecreatetruecolor($width, $height);
+        imagecopyresampled($resizedImage, $croppedImage, 0, 0, 0, 0, $width, $height, $newWidth, $newHeight);
+
+        // Sauvegarder l'image en format WEBP
+        if (!imagewebp($resizedImage, $dest)) {
+            throw new Exception('Failed to save image as WEBP.');
+        }
+
+        // Libération de la mémoire
+        imagedestroy($sourceImage);
+        imagedestroy($croppedImage);
+        imagedestroy($resizedImage);
+
         return $dest;
-    } catch(Exception $e) {
+    } catch (Exception $e) {
         return false;
     }
 }

@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "esbuild": "0.25.8"
+  },
+  "dependencies": {
+    "php-bulk-installer": "^1.1.2"
   }
 }

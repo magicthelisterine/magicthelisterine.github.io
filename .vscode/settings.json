@@ -5,18 +5,12 @@
     "terminal.integrated.env.osx": {
         "PATH": "${workspaceFolder}/pxdoc/_bin/mac:${env:PATH}:${workspaceFolder}"
     },
-    "emeraldwalk.runonsave": {
-        "autoClearConsole": true,
-        "commands": [
-            {
-                "match": "_.*\\.php$",
-                "cmd": "php \"${workspaceFolder}/pxdoc/_bin/scripts/pxdoc.php\" \"${file}\""
-            }
-        ]
-    },
+
     "liveServer.settings.port": 5502,
     "liveSassCompile.settings.generateMap": false,
     "liveSassCompile.settings.useNewCompiler": true,
+    "liveSassCompile.settings.watchOnLaunch": false,
+    "liveSassCompile.settings.showOutputWindowOn": "Debug",
     "liveSassCompile.settings.formats": [
         {
             "format": "compressed",
@@ -25,32 +19,22 @@
             "savePathReplacementPairs": null
         }
     ],
-    "MinifyAll.disableCss": true,
-    "MinifyAll.disableHtml": true,
-    "MinifyAll.disableJson": true,
-    "MinifyAll.disableJsonc": true,
-    "MinifyAll.disableLess": true,
-    "MinifyAll.disablePhp": true,
-    "MinifyAll.disableSass": true,
-    "MinifyAll.disableScss": true,
-    "MinifyAll.disableTwig": true,
-    "MinifyAll.disableXml": true,
-    "MinifyAll.disableJavascriptReact": true,
-    "MinifyAll.disableJavascript": true,
-    "MinifyAll.PrefixOfNewMinifiedFiles": ".min",
-    "MinifyAll.minifyOnSaveToNewFile": false,
-    "MinifyAll.openMinifiedDocument": false,
-    "MinifyAll.terserMinifyOptions": {
-        "mangle": true,
-        "compress": {
-            "drop_console": false,
-            "dead_code": true,
-            "keep_fnames": false,
-            "keep_classnames": false
+
+    "filewatcher.commands": [
+        {
+            "match": "[\\\\/]_[^\\\\/]+\\.php$",
+            "isAsync": false,
+            "cmd": "${workspaceRoot}/node_modules/.bin/php-bulk \"${workspaceRoot}/pxdoc/_bin/scripts/pxdoc.php\" \"${file}\"",
+            "event": "onFileChange"
+        },
+
+        {
+            "match": "(?<!\\.min)\\.js$",
+            "isAsync": false,
+            "cmd": "${workspaceRoot}/node_modules/.bin/esbuild \"${file}\" --log-level=error --minify --target=es2020 --outfile=\"${fileDirname}/${fileBasenameNoExt}.min.js\"",
+            "event": "onFileChange"
         }
-    },
-    "liveSassCompile.settings.watchOnLaunch": false,
-    "liveSassCompile.settings.showOutputWindowOn": "Debug",
-    "MinifyAll.disableFileExplorerContextMenu": false,
-    "MinifyAll.disableCodeContextMenu": false,
+
+    ]
+
 }

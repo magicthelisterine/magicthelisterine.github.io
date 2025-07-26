@@ -16,7 +16,7 @@ $types = json_decode(file_get_contents($datadir . 'types.json'));
 $data = [
     "series" => $series,
     "supertypes" => $supertypes,
-    "types" => $types,
+    "types" => array_map(function($item) { return $item->{'title'}; }, $types)
 ];
 
 ?>
