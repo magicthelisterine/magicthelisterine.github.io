@@ -17,7 +17,7 @@ require_once(__DIR__ . '/libraries/brainstorm.class.php');
 // die();
 if(!CACHE) {
     if(!$cards = Brainstorm::getCards()) err("Can't get cards from API.");
-    file_put_contents(DATA_DIR . 'cards.json', json_encode($cards));
+    // file_put_contents(DATA_DIR . 'cards.json', json_encode($cards));
     Cache::set('cards', $cards);
 } else $cards = Cache::get('cards');
 

@@ -3,6 +3,7 @@
     "esbuild": "0.25.8"
   },
   "dependencies": {
-    "php-bulk-installer": "^1.1.2"
+    "php-bulk-installer": "^1.1.2",
+    "sass": "^1.89.2"
   }
 }
