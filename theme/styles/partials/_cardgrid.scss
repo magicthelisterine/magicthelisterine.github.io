@@ -224,6 +224,7 @@ body.dark {
         
         display: -webkit-box;
         -webkit-line-clamp: 9;   /* Nombre de lignes max */
+        line-clamp: 9;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;

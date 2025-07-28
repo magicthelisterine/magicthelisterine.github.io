@@ -5,21 +5,6 @@
     "terminal.integrated.env.osx": {
         "PATH": "${workspaceFolder}/pxdoc/_bin/mac:${env:PATH}:${workspaceFolder}"
     },
-
-    "liveServer.settings.port": 5502,
-    "liveSassCompile.settings.generateMap": false,
-    "liveSassCompile.settings.useNewCompiler": true,
-    "liveSassCompile.settings.watchOnLaunch": false,
-    "liveSassCompile.settings.showOutputWindowOn": "Debug",
-    "liveSassCompile.settings.formats": [
-        {
-            "format": "compressed",
-            "extensionName": ".min.css",
-            "savePath": null,
-            "savePathReplacementPairs": null
-        }
-    ],
-
     "filewatcher.commands": [
         {
             "match": "[\\\\/]_[^\\\\/]+\\.php$",
@@ -34,9 +19,15 @@
             "event": "onFileChange"
         },
         {
-            "match": "[\\\\/](?!_)[^/]+\\.scss$",
+            "match": "[\\\\/](?!_)[^\\\\/]+\\.scss$",
             "isAsync": false,
             "cmd": "${workspaceRoot}/node_modules/.bin/sass \"${file}\" \"${fileDirname}/${fileBasenameNoExt}.min.css\" --style=compressed --no-source-map --quiet",
+            "event": "onFileChange"
+        },
+        {
+            "match": "[\\\\/]_[^\\\\/]+\\.scss$",
+            "isAsync": false,
+            "cmd": "${workspaceRoot}/node_modules/.bin/sass \"${fileDirname}/../styles.scss\"  \"${fileDirname}/../styles.min.css\" --style=compressed --no-source-map --quiet",
             "event": "onFileChange"
         }
 
