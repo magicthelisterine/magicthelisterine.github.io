@@ -113,7 +113,9 @@ body.dark .card-submit-container table tr:nth-child(even) td {
     }
 
     td.cost-input {
-        display: flex; justify-content: space-between; align-items: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
         // text-align: justify;
         // text-align-last: justify;

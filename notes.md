@@ -8,3 +8,12 @@ https://script.google.com/macros/s/AKfycbxcQ4qPwEP9hBJt3YT1tubFGqYTfaydSrkDiQj91
 
 
 git clone --recurse-submodules -j8 https://github.com/magicthelisterine/magicthelisterine.github.io.git
+
+
+git clone --recurse-submodules -j8 https://github.com/ZmotriN/pxdoc-starter.git
+
+
+git submodule add https://github.com/ZmotriN/pxdoc.git
+
+
+Set-ExecutionPolicy -ExecutionPolicy ByPass -Scope LocalMachine

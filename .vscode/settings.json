@@ -1,9 +1,9 @@
 {
     "terminal.integrated.env.windows": {
-        "PATH": "${workspaceFolder}\\pxdoc\\_bin\\windows;${env:PATH};${workspaceFolder}"
+        "PATH": "${workspaceFolder}\\node_modules\\.bin;${workspaceFolder}\\pxdoc\\_bin\\windows;${env:PATH};${workspaceFolder}"
     },
     "terminal.integrated.env.osx": {
-        "PATH": "${workspaceFolder}/pxdoc/_bin/mac:${env:PATH}:${workspaceFolder}"
+        "PATH": "${workspaceFolder}/node_modules/.bin:${workspaceFolder}/pxdoc/_bin/mac:${env:PATH}:${workspaceFolder}"
     },
     "filewatcher.commands": [
         {
@@ -15,7 +15,13 @@
         {
             "match": "(?<!\\.min)\\.js$",
             "isAsync": false,
-            "cmd": "${workspaceRoot}/node_modules/.bin/esbuild \"${file}\" --log-level=error --minify --target=es2020 --outfile=\"${fileDirname}/${fileBasenameNoExt}.min.js\"",
+            "cmd": "${workspaceRoot}/node_modules/.bin/esbuild \"${file}\" --log-level=error --minify --target=es2020 --legal-comments=none --outfile=\"${fileDirname}/${fileBasenameNoExt}.min.js\"",
+            "event": "onFileChange"
+        },
+        {
+            "match": "[\\\\/]pxdoc[\\\\/]jscripts[\\\\/].*(?<!\\.min)\\.js$",
+            "isAsync": false,
+            "cmd": "node ${workspaceRoot}/pxdoc/_bin/node/bundle-js.js",
             "event": "onFileChange"
         },
         {
@@ -32,5 +38,4 @@
         }
 
     ]
-
 }

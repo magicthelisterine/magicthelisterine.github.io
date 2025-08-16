@@ -5,12 +5,12 @@
  ******************************************************/
 register_page_type('virgin', [
     'header' => [
-        realpath(__DIR__ . '/../pxdoc/_includes/templates/header.php'),
-        realpath(__DIR__ . '/../pxdoc/_includes/templates/header_main.php'),
+        realpath(__DIR__ . '/../../pxdoc/_includes/templates/header.php'),
+        realpath(__DIR__ . '/../../pxdoc/_includes/templates/header_main.php'),
     ],
     'footer' => [
-        realpath(__DIR__ . '/../pxdoc/_includes/templates/footer_main.php'),
-        realpath(__DIR__ . '/../pxdoc/_includes/templates/footer.php'),
+        realpath(__DIR__ . '/../../pxdoc/_includes/templates/footer_main.php'),
+        realpath(__DIR__ . '/../../pxdoc/_includes/templates/footer.php'),
     ],
 ]);
 

@@ -24,7 +24,7 @@ const CardPool = {
         black: false,
         white: false
     },
-
+ 
 
     init: async function (data) {
         this.data = data;
@@ -112,8 +112,8 @@ const CardPool = {
 
     setFilters: function(filters = {}) {
         this.filters = { ...this.filters, ...filters };
-
         const [name, order] = this.filters.sortby.split('_');
+
         switch(name) {
             case 'added': this.cards.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt)); break;
             case 'modified': this.cards.sort((a, b) => new Date(a.lastModifiedAt) - new Date(b.lastModifiedAt)); break;
@@ -122,6 +122,7 @@ const CardPool = {
             case 'power': this.cards.sort((a, b) => { if (a.power === b.power) { return a.name.localeCompare(b.name); } return a.power - b.power; }); break;
             case 'toughness': this.cards.sort((a, b) => { if (a.toughness === b.toughness) { return a.name.localeCompare(b.name); } return a.toughness - b.toughness; }); break;
         }
+        
         if(order == 'desc') this.cards.reverse();
 
         this.filters.inclusive_sum = Object.entries({ red: RED, green: GREEN, blue: BLUE, white: WHITE, black: BLACK })
@@ -233,12 +234,6 @@ const CardPool = {
     trimBraces: function (str) {
         return (String(str).match(/{[^}]*}/g) || []).join('').toUpperCase();
     }
-
-
-
-
-
-
 
 }
 

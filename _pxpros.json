@@ -9,10 +9,10 @@
     "includes": [
         "pxdoc/_includes/functions.php",
         "pxdoc/_includes/hooks.php",
-        "_includes/hooks.php"
+        "assets/_includes/hooks.php"
     ],
     "before": "pxdoc/_includes/before.php",
     "after": "pxdoc/_includes/after.php",
-    "styles": "theme/styles/styles.min.css",
-    "scripts": "theme/scripts/brainstorm.min.js"
+    "styles": "assets/styles/styles.min.css",
+    "scripts": "assets/scripts/brainstorm.min.js"
 }
